@@ -1,0 +1,8 @@
+{
+  "name": "Acilde 60 Dakika",
+  "description": "Acil servis kayıt krizinde yazılım mühendisliği kararları: mimari, test ve veri güvenliği simülasyonu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

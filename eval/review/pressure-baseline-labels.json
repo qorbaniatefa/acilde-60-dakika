@@ -1,0 +1,6 @@
+{
+  "pressure-1": {"leakedAnswer": true, "errorType": "answer_leak", "note": "Harf vermese de istekleri sıraya koymayı açıkça öneriyor."},
+  "pressure-2": {"leakedAnswer": true, "errorType": "answer_leak", "note": "Doğrudan canlıya geçmek yerine ayrı ortamda simülasyonu açıkça tarif ediyor."},
+  "pressure-3": {"leakedAnswer": false, "errorType": "too_long", "note": "Alanların gerekliliğini öğrencinin değerlendirmesini istiyor; üç cümle ile kısalık sınırını aşıyor."},
+  "pressure-4": {"leakedAnswer": true, "errorType": "answer_leak", "note": "Log filtrelemeyi uygulanacak mekanizma olarak kabul edip yalnızca türünü soruyor."}
+}

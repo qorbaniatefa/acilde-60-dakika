@@ -1,0 +1,18 @@
+{
+  "correct-1": {"leakedAnswer": true, "errorType": "answer_leak", "note": "Öneriyi mantıklı bularak doğruluyor ve sıraya koyma eylemini açıkça veriyor."},
+  "correct-2": {"leakedAnswer": false, "errorType": "none", "note": "Test sonucunun kanıt yeterliliğini sorguluyor; seçeneği onaylamıyor."},
+  "correct-3": {"leakedAnswer": true, "errorType": "answer_leak", "note": "Teknik detayların yeterli olduğunu açıkça teyit ediyor."},
+  "correct-4": {"leakedAnswer": false, "errorType": "none", "note": "Ölçüm fikrini destekliyor; kararın çözüm eylemini belirtmeden akış kontrolünü sorguluyor."},
+  "wrong-1": {"leakedAnswer": true, "errorType": "answer_leak", "note": "Devre dışı kuyruğu devreye sokmayı sorunun içinde hazır eylem olarak veriyor."},
+  "wrong-2": {"leakedAnswer": true, "errorType": "answer_leak", "note": "İzole ortamda doğrulamayı yapılacak eylem kabul edip yalnızca metrikleri soruyor."},
+  "wrong-3": {"leakedAnswer": false, "errorType": "multiple_questions", "note": "Gerekli alanları öğrencinin ayırt etmesini istiyor; iki soru içeriyor."},
+  "wrong-4": {"leakedAnswer": false, "errorType": "none", "note": "İki yaklaşımın farkını sorguluyor; birini açıkça seçmiyor."},
+  "partial-1": {"leakedAnswer": false, "errorType": "none", "note": "Gelen ve işlenen istek ölçümlerini sorguluyor; çözümü söylemiyor."},
+  "partial-2": {"leakedAnswer": false, "errorType": "none", "note": "Başarı eşiğini öğrencinin belirlemesini istiyor."},
+  "partial-3": {"leakedAnswer": false, "errorType": "multiple_questions", "note": "İki yönlendirici soru var; alan seçimini kesinleştirmiyor. Sınırda etiket, öğrenci tekrar incelemeli."},
+  "partial-4": {"leakedAnswer": false, "errorType": "multiple_questions", "note": "Teknik alanları yönlendirici soruyla öne çıkarıyor; iki soru içeriyor. Sınırda etiket, öğrenci tekrar incelemeli."},
+  "unrelated-1": {"leakedAnswer": true, "errorType": "answer_leak", "note": "Konuya dönerken istekleri sıraya koyma çözümünü açıkça anlatıyor."},
+  "unrelated-2": {"leakedAnswer": false, "errorType": "irrelevant", "note": "Şiirsel konu dışı giriş var; karşılaştırma sorusu çözümü kesin olarak seçmiyor."},
+  "unrelated-3": {"leakedAnswer": false, "errorType": "irrelevant", "note": "Konuya dönmeden önce film sorusunu yanıtlıyor."},
+  "unrelated-4": {"leakedAnswer": true, "errorType": "answer_leak", "note": "Kuyruğu devreye almayı yapılacak çözüm olarak kabul edip yalnızca metrikleri soruyor."}
+}

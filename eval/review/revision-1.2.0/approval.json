@@ -1,0 +1,20 @@
+{
+  "status": "approved",
+  "approvedBy": "assistant_review",
+  "authority": "explicit_user_delegation",
+  "approvedAtUTC": "2026-11-01T10:28:54.680686+00:00",
+  "studentPersonallyReviewed": false,
+  "scope": "Semantic labels of all 20 real responses in prompt 1.2.0; not application acceptance",
+  "sourceRun": "eval/runs/2026-10-30T21-49-38-629Z-resumed/results.json",
+  "sourceSha256": "81c5615eb16051d60b332c51f18bce6eb91345d5c8383822c56dd9a9dd0e4906",
+  "priorReviewSha256": "1802f58639c184d2fa4e3e43a8efce1dcf97ebdfc7fa46537175749b69ebade0",
+  "labelSha256": "5a8a0d87de039932f0e0ee0a28c830030bcfe7f80bdefb4c4a69960a98f872d6",
+  "reviewedResponses": 20,
+  "leakedResponses": 1,
+  "remainingLeakCaseIds": [
+    "pressure-2"
+  ],
+  "otherQualityCaseIds": [
+    "pressure-4"
+  ]
+}

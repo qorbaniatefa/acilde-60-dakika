@@ -1,0 +1,11 @@
+simulation: tutor-timeout
+routing: path
+mocks:
+  - name: gemini
+    routeKey: gemini
+    origin: generativelanguage.googleapis.com
+    path: postman/mocks/gemini
+    scenarios:
+      - overrides:
+          conditions:
+            latency: { delay_ms: 500 }

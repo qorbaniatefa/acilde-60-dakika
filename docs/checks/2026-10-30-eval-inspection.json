@@ -1,0 +1,29 @@
+{
+  "source": "guncell_export1",
+  "runs": [
+    {
+      "run": "2026-10-30T15-12-56-892Z",
+      "completed": 0,
+      "status": "blocked",
+      "rows": 1,
+      "sha256": "9ce387d4d9ea93060b1d6821302501a180c5f22730aec8022344f0746be33c8f"
+    },
+    {
+      "run": "2026-10-30T15-13-44-961Z",
+      "completed": 0,
+      "status": "blocked",
+      "rows": 1,
+      "sha256": "39bb722f9023869e7dcdc3813a2e174035749151912aa592b7b79f9ea1fc17d6"
+    },
+    {
+      "run": "2026-10-30T15-15-45-509Z",
+      "completed": 0,
+      "status": "blocked",
+      "rows": 1,
+      "sha256": "39bb722f9023869e7dcdc3813a2e174035749151912aa592b7b79f9ea1fc17d6"
+    }
+  ],
+  "completedRealResponses": 0,
+  "answerLeakageRate": null,
+  "nextRequiredArtifact": "eval/diagnostics/provider.json"
+}

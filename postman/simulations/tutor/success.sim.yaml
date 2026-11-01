@@ -1,0 +1,7 @@
+simulation: tutor-success
+routing: path
+mocks:
+  - name: gemini
+    routeKey: gemini
+    origin: generativelanguage.googleapis.com
+    path: postman/mocks/gemini

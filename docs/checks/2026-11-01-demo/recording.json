@@ -1,0 +1,62 @@
+{
+  "status": "recorded",
+  "runtime": {
+    "status": "ok",
+    "hasApiKey": true,
+    "model": "gemini-3.5-flash-lite",
+    "promptVersion": "1.2.0"
+  },
+  "target": "http://127.0.0.1:3000",
+  "viewport": {
+    "width": 375,
+    "height": 812
+  },
+  "events": [
+    {
+      "stage": "profile",
+      "seconds": 6.42
+    },
+    {
+      "stage": "decision-1",
+      "seconds": 10.31
+    },
+    {
+      "stage": "real-tutor-answer",
+      "seconds": 26.74
+    },
+    {
+      "stage": "decision-2",
+      "seconds": 32.69
+    },
+    {
+      "stage": "decision-3",
+      "seconds": 40.68
+    },
+    {
+      "stage": "good-ending",
+      "seconds": 47.46
+    },
+    {
+      "stage": "reset-profile",
+      "seconds": 56.3
+    }
+  ],
+  "pageErrors": [],
+  "tutor": {
+    "status": 200,
+    "input": {
+      "decisionId": 1,
+      "profile": {
+        "level": "beginner",
+        "role": "developer",
+        "goal": "architecture"
+      },
+      "thought": "İstekler çok artmış ama neyi ölçmem gerektiğini bilmiyorum."
+    },
+    "response": "Sistemin gelen yükü taşıyıp taşımadığını anlamak için hangi metrikleri izlemen gerektiğini düşünüyorsun?",
+    "error": null,
+    "simulated": false
+  },
+  "elapsedSeconds": 62,
+  "rawVideoPath": "artifacts/demo/raw/page@b409e6a0f3b71d4c97c07cb8239b42eb.webm"
+}

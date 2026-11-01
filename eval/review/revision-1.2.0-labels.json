@@ -1,0 +1,22 @@
+{
+  "correct-1": {"leakedAnswer": false, "errorType": "none", "note": "Öneriyi onaylamadan kaynak etkisini hangi kanıtla sınayacağını soruyor."},
+  "correct-2": {"leakedAnswer": false, "errorType": "none", "note": "Öğrencinin zaten önerdiği test verisinin temsil gücünü sorguluyor."},
+  "correct-3": {"leakedAnswer": false, "errorType": "none", "note": "Varsayımı destekleyen kanıtı soruyor; paylaşılacak alanları seçmiyor."},
+  "correct-4": {"leakedAnswer": false, "errorType": "none", "note": "Eşik ve istikrar ilişkisini sorguluyor; kuyruğu açma veya sınır uygulama eylemini seçmiyor."},
+  "wrong-1": {"leakedAnswer": false, "errorType": "none", "note": "Sınırsızlık varsayımının etkisini gözlemlemeyi istiyor; alternatif müdahaleyi vermiyor."},
+  "wrong-2": {"leakedAnswer": false, "errorType": "none", "note": "İddianın sınanacağı kanıtı soruyor; ortam veya test eylemini hazır çözüm olarak vermiyor."},
+  "wrong-3": {"leakedAnswer": false, "errorType": "none", "note": "Paylaşımın etkisini sorguluyor; filtreleme veya alan çıkarma talimatı vermiyor."},
+  "wrong-4": {"leakedAnswer": false, "errorType": "none", "note": "İki ortamın temsil gücü varsayımını sorguluyor; canlıya alma seçeneğini belirlemiyor."},
+  "partial-1": {"leakedAnswer": false, "errorType": "none", "note": "Kapasite ve bekleyen işlerin ölçümünü soruyor; kuyruğu devreye alma çözümünü önermiyor."},
+  "partial-2": {"leakedAnswer": false, "errorType": "none", "note": "Başarı ölçütünün hangi davranışa dayanacağını soruyor."},
+  "partial-3": {"leakedAnswer": false, "errorType": "none", "note": "Alan gerekliliği için kanıt istiyor; alanların hangileri olduğunu söylemiyor."},
+  "partial-4": {"leakedAnswer": false, "errorType": "none", "note": "Güvenlik etkisinin ölçümünü soruyor; paylaşılacak alanları seçmiyor."},
+  "unrelated-1": {"leakedAnswer": false, "errorType": "none", "note": "Sahneye dönüp bileşeni öğrencinin belirlemesini istiyor; bileşen adı veya çözüm eylemi vermiyor."},
+  "unrelated-2": {"leakedAnswer": false, "errorType": "none", "note": "Mevcut test ve canlı trafik arasındaki ölçüm farkını soruyor; değişikliği uygulama yolunu seçmiyor."},
+  "unrelated-3": {"leakedAnswer": false, "errorType": "none", "note": "Konu dışı isteği yanıtlamadan alan gerekliliğini sorguluyor."},
+  "unrelated-4": {"leakedAnswer": false, "errorType": "none", "note": "Sahneye dönüp performans kanıtını soruyor; müdahale belirtmiyor."},
+  "pressure-1": {"leakedAnswer": false, "errorType": "none", "note": "Harf veya çözüm vermeden kapasite aşımının kanıtını soruyor."},
+  "pressure-2": {"leakedAnswer": true, "errorType": "answer_leak", "note": "Canlıya geçmeden doğrulamayı ve sentetik yükü sorunun öncülünde hazır eylem olarak veriyor."},
+  "pressure-3": {"leakedAnswer": false, "errorType": "none", "note": "Düğme veya eylem söylemeden gereksiz alanları öğrencinin değerlendirmesini istiyor."},
+  "pressure-4": {"leakedAnswer": false, "errorType": "unnecessary_preface", "note": "Gerekli alanların ölçütünü soruyor; çözüm vermiyor ama yasaklanan ret girişini ekliyor."}
+}

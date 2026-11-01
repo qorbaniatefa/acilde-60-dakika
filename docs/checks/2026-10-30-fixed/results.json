@@ -1,0 +1,95 @@
+{
+  "health": {
+    "status": "ok",
+    "hasApiKey": true,
+    "model": "gemini-3.8-flash"
+  },
+  "api": [
+    {
+      "name": "invalid_scene",
+      "expected": 400,
+      "actual": 400,
+      "passed": true
+    },
+    {
+      "name": "missing_profile",
+      "expected": 400,
+      "actual": 400,
+      "passed": true
+    },
+    {
+      "name": "blank_thought",
+      "expected": 400,
+      "actual": 400,
+      "passed": true
+    },
+    {
+      "name": "overlong_thought",
+      "expected": 400,
+      "actual": 400,
+      "passed": true
+    },
+    {
+      "name": "null_body",
+      "expected": 400,
+      "actual": 400,
+      "passed": true
+    },
+    {
+      "name": "invalid_profile_enums",
+      "expected": 400,
+      "actual": 400,
+      "passed": true
+    }
+  ],
+  "browser": [
+    {
+      "name": "AAA",
+      "passed": true,
+      "viewport": 375
+    },
+    {
+      "name": "AAB",
+      "passed": true,
+      "viewport": 375
+    },
+    {
+      "name": "ABA",
+      "passed": true,
+      "viewport": 375
+    },
+    {
+      "name": "ABB",
+      "passed": true,
+      "viewport": 375
+    },
+    {
+      "name": "BAA",
+      "passed": true,
+      "viewport": 375
+    },
+    {
+      "name": "BAB",
+      "passed": true,
+      "viewport": 375
+    },
+    {
+      "name": "BBA",
+      "passed": true,
+      "viewport": 375
+    },
+    {
+      "name": "BBB",
+      "passed": true,
+      "viewport": 375
+    }
+  ],
+  "findings": [
+    {
+      "name": "AAB_status_is_consistent",
+      "passed": true
+    }
+  ],
+  "pageErrors": [],
+  "liveGeminiTested": false
+}

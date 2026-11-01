@@ -1,0 +1,8 @@
+{
+  "model": "gemini-3.5-flash-lite",
+  "probeLatencyMs": 615,
+  "probeStatus": 200,
+  "tutorFirstCaseStatus": 200,
+  "completeEvaluationReceived": false,
+  "qualitativeRisk": "Diagnostic preview affirms the learner approach; not counted in a 20-case leakage rate."
+}

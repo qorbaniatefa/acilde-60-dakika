@@ -1,0 +1,19 @@
+{
+  "openapi": "3.0.3",
+  "info": { "title": "Gemini generateContent local fixture", "version": "1.0.0", "description": "Only the SDK response subset used by this app. Not proof of real model quality. Contract reference: https://ai.google.dev/api/generate-content" },
+  "servers": [{ "url": "https://generativelanguage.googleapis.com" }],
+  "paths": {
+    "/v1beta/models/test-model:generateContent": {
+      "post": {
+        "operationId": "generateContent",
+        "responses": {
+          "200": {
+            "description": "One text candidate",
+            "content": { "application/json": { "example": { "candidates": [{ "content": { "role": "model", "parts": [{ "text": "Bu varsayımını hangi gözlemle sınayabilirsin?" }] }, "finishReason": "STOP", "index": 0 }], "usageMetadata": { "promptTokenCount": 10, "candidatesTokenCount": 10, "totalTokenCount": 20 }, "modelVersion": "test-model" } } }
+          },
+          "503": { "description": "Provider unavailable", "content": { "application/json": { "example": { "error": { "code": 503, "message": "Service unavailable", "status": "UNAVAILABLE" } } } } }
+        }
+      }
+    }
+  }
+}

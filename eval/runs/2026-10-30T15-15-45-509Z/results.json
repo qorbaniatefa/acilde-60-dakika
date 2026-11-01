@@ -1,0 +1,25 @@
+{
+  "promptVersion": "1.1.0",
+  "target": "http://127.0.0.1:3000",
+  "completed": 0,
+  "status": "blocked",
+  "rows": [
+    {
+      "id": "correct-1",
+      "category": "correct",
+      "decisionId": 1,
+      "profile": {
+        "level": "beginner",
+        "role": "developer",
+        "goal": "architecture"
+      },
+      "thought": "Bekleyen işleri kaybetmeden tutarken aynı anda çalışan iş sayısını sınırlamayı düşünüyorum.",
+      "status": 502,
+      "response": null,
+      "error": "Öğretmene ulaşılamadı. Tekrar deneyebilir veya kararına devam edebilirsin.",
+      "leakedAnswer": null,
+      "errorType": null,
+      "note": null
+    }
+  ]
+}

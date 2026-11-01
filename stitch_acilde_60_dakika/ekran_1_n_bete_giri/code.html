@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-dim": "#0a1323", "on-secondary-fixed-variant": "#005236", "on-primary-fixed": "#2b1700", "inverse-on-surface": "#283042", "primary-fixed-dim": "#ffb961", "on-primary-container": "#734600", "on-secondary": "#003824", "outline-variant": "#524436", "secondary-container": "#00a572", "secondary-fixed": "#6ffbbe", "secondary-fixed-dim": "#4edea3", "inverse-surface": "#dae2f9", "primary-fixed": "#ffddb9", "tertiary-container": "#ffaeab", "primary-container": "#ffb454", "on-error": "#690005", "on-surface-variant": "#d6c3b1", "on-tertiary-container": "#95272d", "surface-container-lowest": "#050e1e", "on-secondary-fixed": "#002113", "tertiary-fixed": "#ffdad8", "surface": "#0a1323", "on-tertiary": "#670211", "on-surface": "#dae2f9", "secondary": "#4edea3", "surface-container": "#172030", "on-tertiary-fixed": "#410006", "inverse-primary": "#865300", "error-container": "#93000a", "outline": "#9f8e7d", "error": "#ffb4ab", "on-error-container": "#ffdad6", "surface-tint": "#ffb961", "on-secondary-container": "#00311f", "tertiary-fixed-dim": "#ffb3b0", "surface-container-highest": "#2c3546", "surface-container-low": "#131c2c", "on-primary-fixed-variant": "#663e00", "background": "#0a1323", "on-background": "#dae2f9", "primary": "#ffd8af", "surface-bright": "#31394b", "tertiary": "#ffd5d3", "surface-container-high": "#212a3b", "on-primary": "#472a00", "surface-variant": "#2c3546", "on-tertiary-fixed-variant": "#881d24" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "gutter-mobile": "0.75rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "margin": "1.5rem", "space-xl": "2rem", "gutter": "1rem", "margin-mobile": "1rem", "space-md": "1rem" }, fontFamily: { "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-code-sm": ["JetBrains Mono"], "label-code-md": ["JetBrains Mono"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-code-lg": ["JetBrains Mono"], "body-md": ["Plus Jakarta Sans"] }, fontSize: { "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "600" }], "headline-lg": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }], "label-code-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500" }], "label-code-md": ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "500" }], "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }], "label-code-lg": ["16px", { lineHeight: "24px", fontWeight: "500" }], "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;overflow-x:hidden;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen pt-safe pb-safe"><main class="flex-1 flex flex-col relative w-full px-margin-mobile bg-surface max-w-[480px] mx-auto min-h-screen"><div class="flex flex-col w-full pb-8">
+<!-- System Status Telemetry Strip -->
+<div class="flex items-center justify-between py-2 px-3 mb-4 rounded-xl bg-surface-container-low text-on-surface">
+<div class="flex items-center space-x-2">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container"></span>
+</span>
+<span class="font-label-code-sm text-label-code-sm text-primary">IST-CORE-NODE #04</span>
+</div>
+<div class="flex items-center space-x-1.5 text-on-surface-variant font-label-code-sm text-label-code-sm">
+<span class="material-symbols-outlined text-[14px]">cloud_download</span>
+<span id="systemClock">02:14:08 UTC</span>
+</div>
+</div>
+<!-- Hero Header & Context Framing -->
+<div class="flex flex-col space-y-3 mb-6">
+<div class="inline-flex items-center self-start px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-code-sm text-label-code-sm">
+<span class="material-symbols-outlined text-[13px] mr-1 text-primary-container">terminal</span>
+      Tek hikâye · 3 karar · 2 son
+    </div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-inverse-surface tracking-tight">
+      Acilde 60 Dakika
+    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Kayıt ekranları donuyor. Bekleyenler artıyor. Bu gece nöbet sende.
+    </p>
+</div>
+<!-- Operational Briefing Card -->
+<div class="p-3.5 mb-6 rounded-xl bg-surface-container-low flex items-start space-x-3">
+<div class="p-2 rounded-lg bg-surface-container-high text-primary-container shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">emergency_home</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code-sm text-label-code-sm text-inverse-surface">HASTANE ALTYAPI SİSTEMİ</span>
+<span class="font-body-md text-[13px] leading-snug text-on-surface-variant mt-0.5">
+        Triyaj kabul birimi veri tabanında kilitlenmeler raporlandı. Otomasyon yanıt vermiyor.
+      </span>
+</div>
+</div>
+<!-- Questions Form Card -->
+<div class="flex flex-col space-y-5">
+<!-- Question 1: Seviye -->
+<div class="p-4 rounded-xl bg-surface-container">
+<div class="flex items-center justify-between mb-3">
+<label class="font-label-code-md text-label-code-md text-inverse-surface flex items-center space-x-1.5">
+<span class="text-primary-container">01.</span>
+<span>Seviyen?</span>
+</label>
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">Zorunlu</span>
+</div>
+<div class="grid grid-cols-2 gap-2" data-question="level">
+<button class="option-btn selected group flex items-center justify-between p-3 rounded-lg bg-surface-container-highest text-inverse-surface font-body-md text-body-md min-h-[48px] transition-all duration-150 active:scale-[0.98]" data-value="junior" type="button">
+<span class="font-medium text-left">Yeni başlayan</span>
+<span class="check-icon flex items-center justify-center w-5 h-5 rounded-full bg-primary-container text-on-primary-container text-[14px]">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+</button>
+<button class="option-btn group flex items-center justify-between p-3 rounded-lg bg-surface-container-low text-on-surface-variant font-body-md text-body-md min-h-[48px] transition-all duration-150 active:scale-[0.98]" data-value="senior" type="button">
+<span class="font-medium text-left">Deneyimli</span>
+<span class="check-icon hidden items-center justify-center w-5 h-5 rounded-full bg-primary-container text-on-primary-container text-[14px]">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+</button>
+</div>
+</div>
+<!-- Question 2: Rol -->
+<div class="p-4 rounded-xl bg-surface-container">
+<div class="flex items-center justify-between mb-3">
+<label class="font-label-code-md text-label-code-md text-inverse-surface flex items-center space-x-1.5">
+<span class="text-primary-container">02.</span>
+<span>Rolün?</span>
+</label>
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">Zorunlu</span>
+</div>
+<div class="grid grid-cols-2 gap-2" data-question="role">
+<button class="option-btn group flex items-center justify-between p-3 rounded-lg bg-surface-container-low text-on-surface-variant font-body-md text-body-md min-h-[48px] transition-all duration-150 active:scale-[0.98]" data-value="developer" type="button">
+<span class="font-medium text-left">Geliştirici</span>
+<span class="check-icon hidden items-center justify-center w-5 h-5 rounded-full bg-primary-container text-on-primary-container text-[14px]">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+</button>
+<button class="option-btn group flex items-center justify-between p-3 rounded-lg bg-surface-container-low text-on-surface-variant font-body-md text-body-md min-h-[48px] transition-all duration-150 active:scale-[0.98]" data-value="qa" type="button">
+<span class="font-medium text-left">Test mühendisi</span>
+<span class="check-icon hidden items-center justify-center w-5 h-5 rounded-full bg-primary-container text-on-primary-container text-[14px]">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+</button>
+</div>
+</div>
+<!-- Question 3: Öğrenme Hedefi -->
+<div class="p-4 rounded-xl bg-surface-container">
+<div class="flex items-center justify-between mb-3">
+<label class="font-label-code-md text-label-code-md text-inverse-surface flex items-center space-x-1.5">
+<span class="text-primary-container">03.</span>
+<span>Öğrenme hedefin?</span>
+</label>
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">Zorunlu</span>
+</div>
+<div class="grid grid-cols-3 gap-2" data-question="goal">
+<button class="option-btn group flex flex-col justify-between p-2.5 rounded-lg bg-surface-container-low text-on-surface-variant font-body-md text-body-md min-h-[58px] transition-all duration-150 active:scale-[0.98]" data-value="arch" type="button">
+<span class="text-xs font-medium truncate w-full text-left">Mimari</span>
+<div class="flex justify-end w-full mt-1">
+<span class="check-icon hidden items-center justify-center w-4 h-4 rounded-full bg-primary-container text-on-primary-container">
+<span class="material-symbols-outlined text-[12px]">check</span>
+</span>
+</div>
+</button>
+<button class="option-btn group flex flex-col justify-between p-2.5 rounded-lg bg-surface-container-low text-on-surface-variant font-body-md text-body-md min-h-[58px] transition-all duration-150 active:scale-[0.98]" data-value="test" type="button">
+<span class="text-xs font-medium truncate w-full text-left">Test</span>
+<div class="flex justify-end w-full mt-1">
+<span class="check-icon hidden items-center justify-center w-4 h-4 rounded-full bg-primary-container text-on-primary-container">
+<span class="material-symbols-outlined text-[12px]">check</span>
+</span>
+</div>
+</button>
+<button class="option-btn group flex flex-col justify-between p-2.5 rounded-lg bg-surface-container-low text-on-surface-variant font-body-md text-body-md min-h-[58px] transition-all duration-150 active:scale-[0.98]" data-value="sec" type="button">
+<span class="text-xs font-medium truncate w-full text-left">Veri güvenliği</span>
+<div class="flex justify-end w-full mt-1">
+<span class="check-icon hidden items-center justify-center w-4 h-4 rounded-full bg-primary-container text-on-primary-container">
+<span class="material-symbols-outlined text-[12px]">check</span>
+</span>
+</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Primary CTA Action Section -->
+<div class="flex flex-col mt-6 space-y-3">
+<button class="w-full min-h-[48px] h-12 rounded-xl flex items-center justify-center space-x-2 font-headline-sm text-headline-sm transition-all duration-200 bg-surface-container-highest text-on-surface-variant opacity-60 cursor-not-allowed" disabled="" id="startShiftBtn" type="button">
+<span class="material-symbols-outlined text-[20px]" id="ctaIcon">lock</span>
+<span id="ctaText">Nöbete başla</span>
+</button>
+<!-- Context & Fiction Notice -->
+<div class="flex items-center justify-center text-center px-4 py-1">
+<p class="font-label-code-sm text-label-code-sm text-on-surface-variant">
+        Yaklaşık 5–8 dakika. Tüm olaylar ve kayıtlar kurgusaldır.
+      </p>
+</div>
+</div>
+</div>
+<script>
+  (function initShiftConsole() {
+    const userSelections = {
+      level: 'junior',
+      role: null,
+      goal: null
+    };
+
+    const container = document.currentScript.parentElement;
+    const startBtn = container.querySelector('#startShiftBtn');
+    const ctaIcon = container.querySelector('#ctaIcon');
+    const questionGroups = container.querySelectorAll('[data-question]');
+
+    function refreshOptionStyles(groupEl, fieldName) {
+      const buttons = groupEl.querySelectorAll('.option-btn');
+      buttons.forEach(btn => {
+        const val = btn.dataset.value;
+        const isSelected = userSelections[fieldName] === val;
+        const checkIcon = btn.querySelector('.check-icon');
+
+        if (isSelected) {
+          btn.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+          btn.classList.add('bg-surface-container-highest', 'text-inverse-surface');
+          if (checkIcon) {
+            checkIcon.classList.remove('hidden');
+            checkIcon.classList.add('flex');
+          }
+        } else {
+          btn.classList.remove('bg-surface-container-highest', 'text-inverse-surface');
+          btn.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+          if (checkIcon) {
+            checkIcon.classList.remove('flex');
+            checkIcon.classList.add('hidden');
+          }
+        }
+      });
+    }
+
+    function checkReadiness() {
+      const isComplete = userSelections.level && userSelections.role && userSelections.goal;
+      if (isComplete) {
+        startBtn.disabled = false;
+        startBtn.classList.remove('bg-surface-container-highest', 'text-on-surface-variant', 'opacity-60', 'cursor-not-allowed');
+        startBtn.classList.add('bg-primary-container', 'text-on-primary-container', 'cursor-pointer', 'shadow-md');
+        ctaIcon.textContent = 'bolt';
+      } else {
+        startBtn.disabled = true;
+        startBtn.classList.add('bg-surface-container-highest', 'text-on-surface-variant', 'opacity-60', 'cursor-not-allowed');
+        startBtn.classList.remove('bg-primary-container', 'text-on-primary-container', 'cursor-pointer', 'shadow-md');
+        ctaIcon.textContent = 'lock';
+      }
+    }
+
+    questionGroups.forEach(group => {
+      const field = group.dataset.question;
+      group.querySelectorAll('.option-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          userSelections[field] = btn.dataset.value;
+          refreshOptionStyles(group, field);
+          checkReadiness();
+        });
+      });
+    });
+
+    startBtn.addEventListener('click', () => {
+      if (startBtn.disabled) return;
+      startBtn.classList.add('scale-[0.98]');
+      setTimeout(() => {
+        startBtn.classList.remove('scale-[0.98]');
+      }, 150);
+    });
+
+    // Simulated terminal second ticker
+    const clockEl = container.querySelector('#systemClock');
+    if (clockEl) {
+      setInterval(() => {
+        const d = new Date();
+        const pad = (n) => String(n).padStart(2, '0');
+        clockEl.textContent = `${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}:${pad(d.getUTCSeconds())} UTC`;
+      }, 1000);
+    }
+  })();
+</script></main></body></html>

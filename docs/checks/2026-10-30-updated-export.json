@@ -1,0 +1,169 @@
+{
+  "folder": "guncell_export",
+  "files": [
+    {
+      "path": ".env.example",
+      "matches": true
+    },
+    {
+      "path": ".gitignore",
+      "matches": true
+    },
+    {
+      "path": "api/openapi.json",
+      "matches": true
+    },
+    {
+      "path": "cypress/e2e/adventure.cy.ts",
+      "matches": true
+    },
+    {
+      "path": "cypress.config.ts",
+      "matches": true
+    },
+    {
+      "path": "DESIGN.md",
+      "matches": true
+    },
+    {
+      "path": "docs/demo-script.md",
+      "matches": true
+    },
+    {
+      "path": "eval/cases.json",
+      "matches": true
+    },
+    {
+      "path": "eval/README.md",
+      "matches": true
+    },
+    {
+      "path": "index.html",
+      "matches": true
+    },
+    {
+      "path": "metadata.json",
+      "matches": true
+    },
+    {
+      "path": "package.json",
+      "matches": true
+    },
+    {
+      "path": "README.md",
+      "matches": true
+    },
+    {
+      "path": "scripts/check-simulation.ts",
+      "matches": true
+    },
+    {
+      "path": "scripts/probe-model.ts",
+      "matches": true
+    },
+    {
+      "path": "scripts/run-eval.ts",
+      "matches": true
+    },
+    {
+      "path": "server/app.ts",
+      "matches": true
+    },
+    {
+      "path": "server/config.ts",
+      "matches": true
+    },
+    {
+      "path": "server/geminiTutorPrompt.ts",
+      "matches": true
+    },
+    {
+      "path": "server/tutor.ts",
+      "matches": true
+    },
+    {
+      "path": "server.ts",
+      "matches": true
+    },
+    {
+      "path": "spec.md",
+      "matches": true
+    },
+    {
+      "path": "src/App.tsx",
+      "matches": true
+    },
+    {
+      "path": "src/components/EndingScreen.tsx",
+      "matches": true
+    },
+    {
+      "path": "src/components/Header.tsx",
+      "matches": true
+    },
+    {
+      "path": "src/components/ProfileScreen.tsx",
+      "matches": true
+    },
+    {
+      "path": "src/components/SceneScreen.tsx",
+      "matches": true
+    },
+    {
+      "path": "src/game/engine.ts",
+      "matches": true
+    },
+    {
+      "path": "src/game/storyData.ts",
+      "matches": true
+    },
+    {
+      "path": "src/index.css",
+      "matches": true
+    },
+    {
+      "path": "src/main.tsx",
+      "matches": true
+    },
+    {
+      "path": "src/types.ts",
+      "matches": true
+    },
+    {
+      "path": "test/gameEngine.test.ts",
+      "matches": true
+    },
+    {
+      "path": "test/reviewRegressions.test.ts",
+      "matches": true
+    },
+    {
+      "path": "test/server.test.ts",
+      "matches": true
+    },
+    {
+      "path": "tsconfig.json",
+      "matches": true
+    },
+    {
+      "path": "vite.config.ts",
+      "matches": true
+    },
+    {
+      "path": "vitest.config.ts",
+      "matches": true
+    }
+  ],
+  "missing": 0,
+  "changed": 0,
+  "unitTests": {
+    "passed": 43,
+    "files": 3,
+    "exitCode": 0
+  },
+  "typescript": {
+    "exitCode": 0
+  },
+  "realEvaluationResultsFound": false,
+  "nextStep": "Collect 20 real tutor responses in AI Studio; label only after receiving raw results."
+}

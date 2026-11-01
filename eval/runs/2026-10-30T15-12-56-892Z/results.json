@@ -1,0 +1,12 @@
+{
+  "promptVersion": "1.1.0",
+  "target": "http://127.0.0.1:3000",
+  "completed": 0,
+  "status": "blocked",
+  "rows": [
+    {
+      "id": "correct-1",
+      "error": "TypeError"
+    }
+  ]
+}

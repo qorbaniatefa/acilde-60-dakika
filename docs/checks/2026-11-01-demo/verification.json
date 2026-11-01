@@ -1,0 +1,25 @@
+{
+  "status": "verified",
+  "path": "artifacts/demo/acilde-60-dakika.mp4",
+  "bytes": 2033909,
+  "sha256": "896bf10240f53d290935447038a15347129d521a11d95095b2e9533d76af563e",
+  "durationSeconds": 59.72,
+  "realTutorStatus": 200,
+  "model": "gemini-3.5-flash-lite",
+  "promptVersion": "1.2.0",
+  "edits": {
+    "profileScreenshotIntroSeconds": 3,
+    "leadingNavigationTrimSeconds": 6.4,
+    "tailFrameHoldUpToSeconds": 10,
+    "outputLimitSeconds": 60,
+    "playbackSpeedChanged": false,
+    "tutorResponseSubstituted": false
+  },
+  "visualChecks": [
+    "real tutor question visible",
+    "good ending visible",
+    "profile reset visible"
+  ],
+  "decodeCheckExitCode": 0,
+  "recordingMethod": "Playwright capture of real local application; separate from Cypress test video"
+}

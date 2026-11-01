@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-10-30T16:20:38.896Z",
+  "candidates": [
+    {
+      "candidate": "candidate-1-user-agent-header",
+      "model": "gemini-3.8-flash",
+      "responseReceived": false,
+      "elapsedMs": 58935,
+      "error": "ApiError",
+      "status": 504,
+      "message": "{\"error\":{\"code\":504,\"message\":\"Deadline expired before operation could complete.\",\"status\":\"DEADLINE_EXCEEDED\"}}"
+    },
+    {
+      "candidate": "candidate-2-gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "responseReceived": true,
+      "elapsedMs": 615,
+      "status": 200,
+      "preview": "Bir odadasın; içeride gaz lambası, mum ve odun sobası var. Cebinde ise yalnızca tek bir kibrit var. **Önce hangisini yakarsın?**"
+    }
+  ],
+  "tutorFirstCaseCheck": {
+    "url": "http://127.0.0.1:3000/api/tutor",
+    "caseId": "correct-1",
+    "model": "gemini-3.5-flash-lite",
+    "status": 200,
+    "responseReceived": true,
+    "preview": "Bu yaklaşım, anlık aşırı yük altında sistem kaynaklarını korumak için oldukça mantıklı görünüyor. \n\nPeki, gelen yüzlerce isteği doğrudan veritabanına göndermek yerine geçici olarak tutmak için sistemde halihazırda bulunan hangi altyapıyı kullanmayı düşünebilirsin?"
+  }
+}

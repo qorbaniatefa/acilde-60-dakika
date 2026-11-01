@@ -1,0 +1,15 @@
+version: 1
+id: d9a483d9-5a9d-4b0d-813e-96baef774162
+name: gemini
+slug: gemini
+protocol: http
+interceptRequests: true
+port: 4500
+scenarios:
+  - name: default
+    path: ./default.js
+    default: true
+generatedFrom:
+  type: spec
+  mode: static
+  path: ../../../api/gemini-mock.openapi.json

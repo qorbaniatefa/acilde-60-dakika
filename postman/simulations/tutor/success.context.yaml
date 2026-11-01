@@ -1,0 +1,30 @@
+purpose:
+  stands_in_for: Gemini generateContent HTTP endpoint used by server/tutor.ts
+  unblocks: Local SDK serialization, provider failure and cancellation checks
+assumptions:
+  - id: sdk-response-decoding
+    status: supported
+    claim: The app returns a text reply when the installed SDK receives the documented text-candidate response shape from the local handler.
+    reason: The real Express route and real SDK returned HTTP 200 against the generated local handler; no SDK or app route was replaced by a response stub.
+    verification: On 2026-10-30, ran scripts/check-simulation.ts success using SIM_DIRECT=true and SIM_BASE_URL=http://127.0.0.1:4017; observed HTTP 200. Error and delayed-handler checks returned 502 and 504 respectively.
+    source: api/gemini-mock.openapi.json; server/tutor.ts; scripts/check-simulation.ts; postman/mocks/gemini/default.js
+    updated_at: '2026-10-30'
+  - id: real-model-quality
+    status: unknown
+    claim: The configured real model supplies useful hints without revealing the correct option.
+    reason: A model probe failed with EACCES before a response could be obtained. The local fixture contains authored text and cannot establish model quality.
+    verification: No completed real-provider evaluation. Twenty cases are prepared under eval/cases.json.
+    source: scripts/probe-model.ts; eval/README.md
+    updated_at: '2026-10-30'
+  - id: postman-engine-execution
+    status: unknown
+    claim: The Postman simulation CLI runs these simulation files in the user's environment.
+    reason: CLI 1.82.0 was available, but the run could not access dataset state under ~/.postman. The Postman-generated CommonJS handler was run directly with Node as a local fallback; this was not a successful CLI simulation run.
+    verification: Generated the mock offline; attempted simulation run with --no-history and received a local dataset-permission error. Owner workspace search was skipped because no authenticated owning workspace is configured; nothing was published.
+    source: postman/mocks/gemini/config.yaml; docs/fixes.md
+    updated_at: '2026-10-30'
+fingerprints:
+  - id: local-fixes-2026-10-30
+    date: '2026-10-30'
+    commit: null
+    cli: '1.82.0'

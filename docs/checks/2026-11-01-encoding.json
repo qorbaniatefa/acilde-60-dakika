@@ -1,0 +1,14 @@
+[
+  {
+    "file": "server\\geminiTutorPrompt.ts",
+    "utf8Bom": true,
+    "contentUnchanged": true,
+    "sha256": "f0ab527b231078fe08e098251adf1d0787eb533432b815e355ce8f6ae98cb70d"
+  },
+  {
+    "file": "server\\app.ts",
+    "utf8Bom": true,
+    "contentUnchanged": true,
+    "sha256": "9773d5e8b0eb719b8e10c3438cb6a929e0970e286f41bc6b72f821fa7269afa6"
+  }
+]

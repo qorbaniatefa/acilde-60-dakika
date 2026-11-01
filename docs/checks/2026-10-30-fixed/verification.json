@@ -1,0 +1,40 @@
+{
+  "unitTests": {
+    "passed": 43,
+    "files": 3
+  },
+  "typescript": {
+    "exitCode": 0
+  },
+  "build": {
+    "exitCode": 0
+  },
+  "install": {
+    "legacyPeerDeps": false,
+    "exitCode": 0
+  },
+  "sdkLocalHttp": [
+    {
+      "scenario": "success",
+      "status": 200
+    },
+    {
+      "scenario": "error",
+      "status": 502
+    },
+    {
+      "scenario": "timeout",
+      "status": 504
+    }
+  ],
+  "liveGemini": {
+    "responseReceived": false,
+    "error": "EACCES"
+  },
+  "cypress": {
+    "testsPrepared": true,
+    "binaryDownloaded": false,
+    "downloadAccessError": "EACCES",
+    "runCompleted": false
+  }
+}

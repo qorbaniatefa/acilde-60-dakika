@@ -1,0 +1,7 @@
+{
+  "httpStatus": 200,
+  "status": "ok",
+  "hasApiKey": true,
+  "model": "gemini-3.5-flash-lite",
+  "promptVersion": "1.2.0"
+}

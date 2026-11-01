@@ -1,0 +1,40 @@
+{
+  "openapi": "3.0.3",
+  "info": { "title": "Acilde 60 Dakika Tutor API", "version": "1.1.0" },
+  "servers": [{ "url": "http://127.0.0.1:3000" }],
+  "paths": {
+    "/api/health": { "get": { "operationId": "getHealth", "responses": { "200": { "description": "Loaded runtime status and prompt identity. Resume clients must reject missing or mismatched model/prompt versions. No secret values.", "content": { "application/json": { "schema": { "type": "object", "required": ["status", "hasApiKey", "model", "promptVersion"], "properties": { "status": { "type": "string", "enum": ["ok"] }, "hasApiKey": { "type": "boolean" }, "model": { "type": "string" }, "promptVersion": { "type": "string", "example": "1.2.0" } } } } } } } } },
+    "/api/tutor": {
+      "post": {
+        "operationId": "requestTutorHint",
+        "description": "Returns a real-provider hint. No browser API key required. Profile enums are validated. Server deadline is 15 seconds and disconnects abort local upstream waiting; this does not guarantee cancellation of work already started at the provider.",
+        "requestBody": {
+          "required": true,
+          "content": { "application/json": { "schema": {
+            "type": "object", "required": ["decisionId", "profile", "thought"],
+            "properties": {
+              "decisionId": { "type": "integer", "enum": [1, 2, 3] },
+              "profile": {
+                "type": "object", "required": ["level", "role", "goal"],
+                "properties": {
+                  "level": { "type": "string", "enum": ["beginner", "experienced"] },
+                  "role": { "type": "string", "enum": ["developer", "tester"] },
+                  "goal": { "type": "string", "enum": ["architecture", "testing", "security"] }
+                }
+              },
+              "thought": { "type": "string", "description": "After trimming, must contain 1 to 2000 characters; rendered only as plain text" }
+            }
+          } } }
+        },
+        "responses": {
+          "200": { "description": "Provider reply", "content": { "application/json": { "schema": { "type": "object", "required": ["tutorResponse"], "properties": { "tutorResponse": { "type": "string", "minLength": 1 } } } } } },
+          "400": { "description": "Invalid JSON, scene, profile or thought; JSON error string" },
+          "413": { "description": "Request body exceeds 100kb; JSON error string" },
+          "502": { "description": "Provider failure or empty reply; JSON error string, no fabricated tutorResponse" },
+          "503": { "description": "API client not configured; JSON error string" },
+          "504": { "description": "Server deadline reached; JSON error string" }
+        }
+      }
+    }
+  }
+}

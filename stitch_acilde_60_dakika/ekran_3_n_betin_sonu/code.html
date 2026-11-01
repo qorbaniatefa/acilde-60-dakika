@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-dim": "#0a1323", "on-secondary-fixed-variant": "#005236", "on-primary-fixed": "#2b1700", "inverse-on-surface": "#283042", "primary-fixed-dim": "#ffb961", "on-primary-container": "#734600", "on-secondary": "#003824", "outline-variant": "#524436", "secondary-container": "#00a572", "secondary-fixed": "#6ffbbe", "secondary-fixed-dim": "#4edea3", "inverse-surface": "#dae2f9", "primary-fixed": "#ffddb9", "tertiary-container": "#ffaeab", "primary-container": "#ffb454", "on-error": "#690005", "on-surface-variant": "#d6c3b1", "on-tertiary-container": "#95272d", "surface-container-lowest": "#050e1e", "on-secondary-fixed": "#002113", "tertiary-fixed": "#ffdad8", "surface": "#0a1323", "on-tertiary": "#670211", "on-surface": "#dae2f9", "secondary": "#4edea3", "surface-container": "#172030", "on-tertiary-fixed": "#410006", "inverse-primary": "#865300", "error-container": "#93000a", "outline": "#9f8e7d", "error": "#ffb4ab", "on-error-container": "#ffdad6", "surface-tint": "#ffb961", "on-secondary-container": "#00311f", "tertiary-fixed-dim": "#ffb3b0", "surface-container-highest": "#2c3546", "surface-container-low": "#131c2c", "on-primary-fixed-variant": "#663e00", "background": "#0a1323", "on-background": "#dae2f9", "primary": "#ffd8af", "surface-bright": "#31394b", "tertiary": "#ffd5d3", "surface-container-high": "#212a3b", "on-primary": "#472a00", "surface-variant": "#2c3546", "on-tertiary-fixed-variant": "#881d24" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "gutter-mobile": "0.75rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "margin": "1.5rem", "space-xl": "2rem", "gutter": "1rem", "margin-mobile": "1rem", "space-md": "1rem" }, fontFamily: { "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-code-sm": ["JetBrains Mono"], "label-code-md": ["JetBrains Mono"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-code-lg": ["JetBrains Mono"], "body-md": ["Plus Jakarta Sans"] }, fontSize: { "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "600" }], "headline-lg": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }], "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }], "label-code-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500" }], "label-code-md": ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "500" }], "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }], "label-code-lg": ["16px", { lineHeight: "24px", fontWeight: "500" }], "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;overflow-x:hidden;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-14 px-margin-mobile flex items-center justify-between max-w-[480px] mx-auto"><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors -ml-1" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back_ios_new</span></button><div class="flex flex-col"><span class="font-label-code-sm text-label-code-sm font-semibold tracking-tight text-on-surface">Simulasyon Merkezi</span><span class="font-label-code-sm text-[10px] text-secondary font-mono tracking-wider">NÖBET AKTİF • 03:42:18</span></div></div><div class="flex items-center gap-space-xs"><div class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-code-sm text-[11px] font-mono">T-60m</div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full px-margin-mobile pt-14 pb-safe bg-surface max-w-[480px] mx-auto min-h-screen"><div class="flex flex-col w-full pb-8">
+<!-- Status Toggle Bar (Interactive Mode Switcher) -->
+<div class="flex items-center justify-between p-1 bg-surface-container rounded-xl mb-4">
+<button class="flex-1 py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 transition-all duration-200 bg-secondary-container text-on-secondary-container shadow-sm" id="btn-state-success" onclick="switchState('success')">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="font-label-code-sm text-label-code-sm uppercase tracking-wider font-semibold">Nominal Son</span>
+</button>
+<button class="flex-1 py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 transition-all duration-200 text-on-surface-variant hover:text-on-surface" id="btn-state-compromise" onclick="switchState('compromise')">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span class="font-label-code-sm text-label-code-sm uppercase tracking-wider font-semibold">Krizin Bedeli</span>
+</button>
+</div>
+<!-- State 1: Nominal Son (İyi Son Durumu) -->
+<div class="flex flex-col gap-4" id="view-success">
+<!-- Result Header Card -->
+<div class="bg-surface-container rounded-xl p-4 flex flex-col gap-3 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-secondary-container/20 text-secondary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-label-code-sm text-label-code-sm font-semibold tracking-wider uppercase">Sistem Stabil</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant font-mono">INC-9481 // ÇÖZÜLDÜ</span>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+          Nöbet Kontrol Altında
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Kayıt akışı toparlandı. Müdahale test edildi, teknik kayıtlar kişisel bilgiler çıkarılarak paylaşıldı.
+        </p>
+</div>
+<!-- Incident Metas -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col">
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">ÇÖZÜM SÜRESİ</span>
+<span class="font-label-code-md text-label-code-md text-secondary font-mono">42dk 18sn</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col">
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">VERİ İHLALİ</span>
+<span class="font-label-code-md text-label-code-md text-secondary font-mono">0 Kayıt (Temiz)</span>
+</div>
+</div>
+</div>
+<!-- Stakeholder / Ece'nin Mesajı Panel -->
+<div class="bg-surface-container-low rounded-xl p-4 flex gap-3.5 items-start">
+<div class="w-11 h-11 rounded-full bg-surface-container-high flex-shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of Ece, a professional Turkish female systems operations specialist with dark hair tied back, subtle office lighting in deep slate blue tones, focused yet relieved expression, cinematic corporate photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP9slW2qEKFSoj7iNFQ-6VcoRpVwnuw3BEGQ3rw9xSLZpXymFLmDvVlqZ4qEX6KFIvR0wYEtdE0vQNha2zkp1BdrbwXi4_h8A7oeONH5QnCGXFVdFxCuFqCLlZ0JbwrKSDd5al4yggEIefHWNe3cAWr3sASuWRdfB9FeeDXIUxLI_qCfZWgOO8FAZ_cfWfPokDo3g38-Ybigy-MRmVpDYks3AxPpSp72WdhZsevdNN"/>
+</div>
+<div class="flex flex-col gap-1 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-code-md text-label-code-md font-semibold text-on-surface">Ece Yıldırım</span>
+<span class="font-label-code-sm text-label-code-sm text-secondary font-mono">Triyaj Amiri</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+          "Kayıt masası yeniden çalışıyor. Artık işlemleri takip edebiliyoruz. Elinize sağlık, vardiya stabil devredildi."
+        </p>
+</div>
+</div>
+</div>
+<!-- State 2: Krizin Bedeli (Kötü Son / Bedel Durumu) - Hidden by default -->
+<div class="hidden flex-col gap-4" id="view-compromise">
+<!-- Result Header Card -->
+<div class="bg-surface-container rounded-xl p-4 flex flex-col gap-3 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-error-container/20 text-error">
+<span class="material-symbols-outlined text-[16px]">warning_amber</span>
+<span class="font-label-code-sm text-label-code-sm font-semibold tracking-wider uppercase">Güvenlik Zafiyeti</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant font-mono">INC-9481 // BEDEL ÖDENDİ</span>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="font-headline-sm text-headline-sm text-error flex items-center gap-2">
+          Krizin Bedeli
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Sistem çalışıyor, ancak hata kaydında gereksiz kişisel bilgiler paylaşıldı. Servis ayakta olsa da veri güvenliği ihlali raporlandı.
+        </p>
+</div>
+<!-- Incident Metas -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col">
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">SERVİS DURUMU</span>
+<span class="font-label-code-md text-label-code-md text-primary-container font-mono">Ayakta (%99.8)</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col">
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">KVKK TEFTİŞİ</span>
+<span class="font-label-code-md text-label-code-md text-error font-mono">Açık Soruşturma</span>
+</div>
+</div>
+</div>
+<!-- Stakeholder / Güvenlik Denetçi Uyarısı -->
+<div class="bg-surface-container-low rounded-xl p-4 flex gap-3.5 items-start">
+<div class="w-11 h-11 rounded-full bg-surface-container-high flex-shrink-0 overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Portrait of an SRE compliance officer in low-key night-shift operations room, wearing neutral glasses, illuminated by amber terminal lights, looking stern and analytical, corporate cybersecurity aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIVC2SN3Y3lg4qI-t3U8iSGRS-BgPLUWhWAvMOxXoi22uUaBmNb3iUAJGk_NyV9r6eQR_hTCYI7jn2UoVgR_J5MnupK6hhPIkh6HQfGUtXA9rKZHIHMqFaHgxS0Ofx86IJr34f9XwGnxQFqP_g1MEBYHSq3DCCLsTSMtFfcqMTnkKmOEFH2dMyn8hjlaBrCgh47W5NZCRLfIRBTAgavARxWp55uY47t_pqSOYB-CVL"/>
+</div>
+<div class="flex flex-col gap-1 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-code-md text-label-code-md font-semibold text-on-surface">Güvenlik Denetimi</span>
+<span class="font-label-code-sm text-label-code-sm text-error font-mono">Geri Bildirim</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+          "Servis çökmekten kurtuldu fakat harici hata izleme servisine aktarılan ham yığın dökümlerinde TCKN bilgileri açıkta kaldı."
+        </p>
+</div>
+</div>
+</div>
+<!-- Telemetry Sparkline Visual Strip -->
+<div class="bg-surface-container-low rounded-xl p-3.5 mt-4 flex flex-col gap-2">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-code-sm text-label-code-sm uppercase tracking-wider font-mono">Gecikme &amp; Veri Akışı (p99)</span>
+<span class="font-label-code-sm text-label-code-sm font-mono text-secondary">38ms • Nominal</span>
+</div>
+<div class="h-10 w-full flex items-end gap-1 pt-1">
+<div class="flex-1 bg-surface-container-highest h-8 rounded-sm"></div>
+<div class="flex-1 bg-surface-container-highest h-9 rounded-sm"></div>
+<div class="flex-1 bg-error-container/60 h-10 rounded-sm"></div>
+<div class="flex-1 bg-error-container/80 h-10 rounded-sm"></div>
+<div class="flex-1 bg-primary-container/70 h-7 rounded-sm"></div>
+<div class="flex-1 bg-primary-container/50 h-5 rounded-sm"></div>
+<div class="flex-1 bg-secondary-container/40 h-3 rounded-sm"></div>
+<div class="flex-1 bg-secondary-container/60 h-3 rounded-sm"></div>
+<div class="flex-1 bg-secondary-container/80 h-2 rounded-sm"></div>
+<div class="flex-1 bg-secondary-container h-2 rounded-sm"></div>
+</div>
+</div>
+<!-- Decisions Summary Table / Cards -->
+<div class="flex flex-col gap-2.5 mt-4">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant uppercase tracking-wider">3 Kararın Özeti</span>
+<span class="font-label-code-sm text-label-code-sm font-mono text-on-surface-variant">SEVK_LOGU</span>
+</div>
+<!-- Karar 1 -->
+<div class="bg-surface-container rounded-xl p-3.5 flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">alt_route</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-code-sm text-label-code-sm text-on-surface font-semibold font-mono">01. YOĞUNLUK YÖNETİMİ</span>
+<span class="font-label-code-sm text-label-code-sm text-secondary font-mono">UYGULANDI</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+          Kalıcı kuyruk etkinleştirildi · Kontrollü işleme
+        </p>
+</div>
+</div>
+<!-- Karar 2 -->
+<div class="bg-surface-container rounded-xl p-3.5 flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">speed</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-code-sm text-label-code-sm text-on-surface font-semibold font-mono">02. TEST &amp; ZAMAN AŞIMI</span>
+<span class="font-label-code-sm text-label-code-sm text-secondary font-mono">UYGULANDI</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+          Yük ve kayıt akışı test edildi · Stabil gecikme
+        </p>
+</div>
+</div>
+<!-- Karar 3 (Dynamic to switch tone visually) -->
+<div class="bg-surface-container rounded-xl p-3.5 flex items-start gap-3" id="decision-3-card">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary flex-shrink-0 mt-0.5" id="decision-3-icon">
+<span class="material-symbols-outlined text-[18px]">security</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-code-sm text-label-code-sm text-on-surface font-semibold font-mono">03. VERİ GÜVENLİĞİ</span>
+<span class="font-label-code-sm text-label-code-sm text-secondary font-mono" id="decision-3-status">GÜVENLİ</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5" id="decision-3-text">
+          Kişisel veriler temizlendi · Gizlilik korundu
+        </p>
+</div>
+</div>
+</div>
+<!-- Engineering Takeaway (Öğrenilen Dersler Paneli) -->
+<div class="bg-surface-container-high rounded-xl p-4 mt-4 flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary-fixed-dim">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+<h3 class="font-headline-sm text-[16px] leading-[22px] font-semibold text-on-surface">Bu Nöbetten Öğrendiğin</h3>
+</div>
+<div class="flex flex-col gap-2.5">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5 flex-shrink-0">check</span>
+<div class="flex flex-col">
+<span class="font-label-code-md text-label-code-md font-semibold text-on-surface">Rate-Limiting &amp; Geri Basınç</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Sistemi aşırı yükten korumak, yavaş ama tutarlı bir kuyruk akışı sağlamaktan geçer.</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5 flex-shrink-0">check</span>
+<div class="flex flex-col">
+<span class="font-label-code-md text-label-code-md font-semibold text-on-surface">Kuyruk Dayanıklılığı</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Bellek içi geçici yapılar yerine kalıcı kuyruk mesaj kaybını önler.</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5 flex-shrink-0">check</span>
+<div class="flex flex-col">
+<span class="font-label-code-md text-label-code-md font-semibold text-on-surface">Log Sanitization (PII Temizleme)</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Acil kriz anlarında bile telemetriye sızan hassas kullanıcı verileri filtrelenmelidir.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Action Button (Amber / High Contrast) -->
+<div class="flex flex-col gap-2 mt-6">
+<button class="w-full h-12 bg-primary-container text-on-primary-container rounded-xl flex items-center justify-center gap-2 font-headline-sm text-[16px] font-semibold transition-transform active:scale-[0.98] shadow-md hover:brightness-105" onclick="handleRestartGame()">
+<span class="material-symbols-outlined text-[20px]">restart_alt</span>
+<span>Yeniden Oyna</span>
+</button>
+<p class="text-center font-label-code-sm text-label-code-sm text-on-surface-variant px-4">
+      Yeni oyunda mühendislik profil soruları baştan yanıtlanacak ve farklı bir nöbet senaryosu başlatılacaktır.
+    </p>
+</div>
+</div>
+<script>
+  function switchState(targetState) {
+    const viewSuccess = document.getElementById('view-success');
+    const viewCompromise = document.getElementById('view-compromise');
+    const btnSuccess = document.getElementById('btn-state-success');
+    const btnCompromise = document.getElementById('btn-state-compromise');
+    const d3Status = document.getElementById('decision-3-status');
+    const d3Text = document.getElementById('decision-3-text');
+    const d3Icon = document.getElementById('decision-3-icon');
+
+    if (targetState === 'success') {
+      viewSuccess.classList.remove('hidden');
+      viewSuccess.classList.add('flex');
+      viewCompromise.classList.add('hidden');
+      viewCompromise.classList.remove('flex');
+
+      btnSuccess.className = 'flex-1 py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 transition-all duration-200 bg-secondary-container text-on-secondary-container shadow-sm';
+      btnCompromise.className = 'flex-1 py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 transition-all duration-200 text-on-surface-variant hover:text-on-surface';
+
+      if (d3Status && d3Text && d3Icon) {
+        d3Status.textContent = 'GÜVENLİ';
+        d3Status.className = 'font-label-code-sm text-label-code-sm text-secondary font-mono';
+        d3Text.textContent = 'Kişisel veriler temizlendi · Gizlilik korundu';
+        d3Icon.className = 'w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary flex-shrink-0 mt-0.5';
+      }
+    } else {
+      viewCompromise.classList.remove('hidden');
+      viewCompromise.classList.add('flex');
+      viewSuccess.classList.add('hidden');
+      viewSuccess.classList.remove('flex');
+
+      btnCompromise.className = 'flex-1 py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 transition-all duration-200 bg-error-container text-on-error-container shadow-sm';
+      btnSuccess.className = 'flex-1 py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 transition-all duration-200 text-on-surface-variant hover:text-on-surface';
+
+      if (d3Status && d3Text && d3Icon) {
+        d3Status.textContent = 'İHLAL OLUŞTU';
+        d3Status.className = 'font-label-code-sm text-label-code-sm text-error font-mono';
+        d3Text.textContent = 'Ham hata dökümü loglandı · Kişisel veriler harici servise sızdı';
+        d3Icon.className = 'w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-error flex-shrink-0 mt-0.5';
+      }
+    }
+  }
+
+  function handleRestartGame() {
+    if (typeof history !== 'undefined' && history.length > 1) {
+      history.back();
+    } else {
+      window.location.reload();
+    }
+  }
+</script></main></body></html>

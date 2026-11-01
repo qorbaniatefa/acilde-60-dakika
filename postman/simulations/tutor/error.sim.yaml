@@ -1,0 +1,11 @@
+simulation: tutor-error
+routing: path
+mocks:
+  - name: gemini
+    routeKey: gemini
+    origin: generativelanguage.googleapis.com
+    path: postman/mocks/gemini
+    scenarios:
+      - overrides:
+          conditions:
+            error: { status_code: 503 }

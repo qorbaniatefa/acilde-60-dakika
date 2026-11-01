@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "resultSource": "user-provided PowerShell transcript",
+  "command": "npm.cmd run test:e2e",
+  "runner": "Cypress 16.2.1",
+  "browser": "Edge 156 headless",
+  "nodeVersion": "24.14.0",
+  "spec": "adventure.cy.ts",
+  "tests": 12,
+  "passing": 12,
+  "failing": 0,
+  "pending": 0,
+  "skipped": 0,
+  "reportedTestDurationSeconds": 18,
+  "video": {
+    "path": "artifacts/cypress/videos/adventure.cy.ts.mp4",
+    "exists": true,
+    "bytes": 3693440,
+    "sha256": "308249b5d350858cbe6923aaa1d7e3b06e7d8c90f481fe9dcd09c647b329f3b5",
+    "durationSeconds": 24.12,
+    "metadataVerifiedWith": "local ffmpeg"
+  },
+  "limits": "UI paths and simulated tutor failure are covered; this run is not a real-provider quality evaluation."
+}

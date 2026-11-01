@@ -1,0 +1,11 @@
+{
+  "configured": true,
+  "model": "gemini-3.5-flash-lite",
+  "responseReceived": false,
+  "timeoutMs": 60000,
+  "error": "TypeError",
+  "code": "EACCES",
+  "message": "fetch failed",
+  "timeoutOrigin": "unknown",
+  "elapsedMs": 67
+}

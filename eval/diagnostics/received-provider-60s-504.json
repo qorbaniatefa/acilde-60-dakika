@@ -1,0 +1,11 @@
+{
+  "configured": true,
+  "model": "gemini-3.8-flash",
+  "responseReceived": false,
+  "timeoutMs": 60000,
+  "error": "ApiError",
+  "status": 504,
+  "message": "{\"error\":{\"code\":504,\"message\":\"Deadline expired before operation could complete.\",\"status\":\"DEADLINE_EXCEEDED\"}}",
+  "timeoutOrigin": "upstream-or-gateway",
+  "elapsedMs": 58671
+}
