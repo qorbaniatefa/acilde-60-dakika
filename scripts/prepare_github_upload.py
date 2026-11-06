@@ -31,7 +31,7 @@ def select_files(root: Path):
                 path = Path(current) / filename
                 if name == 'test' and (path.parent != directory or not filename.endswith('.test.ts')):
                     continue
-                if name == 'artifacts' and path.suffix.lower() not in {'.json', '.mp4'}:
+                if name == 'artifacts' and path.suffix.lower() not in {'.json', '.mp4', '.ass'}:
                     continue
                 candidates.append(path)
     for path in candidates:

@@ -1,0 +1,63 @@
+{
+  "status": "recorded",
+  "source": "actual_local_static_build",
+  "synthetic_pilot": true,
+  "probabilities_stubbed": false,
+  "model_sha256": "7c2dc8cb9b45fa53e670cb4797b52123cb18d5f54df3aad732d80b6f813f64aa",
+  "published_hf_revision": "816ac3e612d7684e79ba6b2f28d6104e0e7c3139",
+  "network_note": "Hosted site unavailable to agent browser (ERR_NETWORK_ACCESS_DENIED). Local server selects local model files; app and ONNX bytes are unchanged.",
+  "viewport": {
+    "width": 720,
+    "height": 960
+  },
+  "checks": [
+    {
+      "count": 5,
+      "max_delta": 1.1920928955078125e-7
+    },
+    {
+      "count": 300,
+      "max_delta": 1.1920928955078125e-7
+    }
+  ],
+  "events": [
+    {
+      "name": "intro",
+      "seconds": 0.001
+    },
+    {
+      "name": "short-profile",
+      "seconds": 8.011
+    },
+    {
+      "name": "deep-profile",
+      "seconds": 18.12
+    },
+    {
+      "name": "five-reference-parity",
+      "seconds": 31.084
+    },
+    {
+      "name": "three-hundred-reference-parity",
+      "seconds": 44.099
+    },
+    {
+      "name": "story-profile",
+      "seconds": 52.249
+    },
+    {
+      "name": "story-decision",
+      "seconds": 60.185
+    },
+    {
+      "name": "release",
+      "seconds": 73.7
+    }
+  ],
+  "pageErrors": [],
+  "short_probability": 0.00862962,
+  "trim_start_seconds": 3.983,
+  "deep_probability": 0.90221643,
+  "duration_seconds": 78.009,
+  "raw_video_path": "artifacts/demo/raw-v2/page@2c87e846229668555a9569945598bbeb.webm"
+}

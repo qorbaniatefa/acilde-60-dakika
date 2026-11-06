@@ -1,0 +1,19 @@
+{
+  "evidence_source": "github_actions_api",
+  "repository": "qorbaniatefa/acilde-60-dakika",
+  "commit": "651c4d1cbde9e32d8438ac290621160725048408",
+  "workflow_run": "https://github.com/qorbaniatefa/acilde-60-dakika/actions/runs/42141695382",
+  "attempt": 2,
+  "status": "completed",
+  "conclusion": "success",
+  "updated_at": "2026-11-06T01:12:57Z",
+  "site_url": "https://qorbaniatefa.github.io/acilde-60-dakika/",
+  "expected_hf_revision": "816ac3e612d7684e79ba6b2f28d6104e0e7c3139",
+  "live_http_verified": false,
+  "live_browser_parity_verified": false,
+  "user_reported_live_browser_parity_verified": true,
+  "user_reported_reference_count": 5,
+  "user_reported_maximum_absolute_difference": 1.19e-7,
+  "user_reported_probabilities": [0.00862962, 0.90221643, 0.20868370, 0.99999994, 0.00825170],
+  "note": "Deployment succeeded. Agent HTTP checks could not connect. Following the request to open the live lab in incognito, the user supplied five matching Python/browser results. This is user-reported live browser evidence, not an agent-run live check. The local Cypress suite separately covered 5+300 inputs."
+}

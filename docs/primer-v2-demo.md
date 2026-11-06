@@ -1,6 +1,14 @@
 # V2 demo — 75 saniye
 
-**Önkoşul:** ONNX/config üretilmiş ve parite geçmiş olmalı. V1 videosu yeni ödevin iki model kararı şartını göstermez. Yeni video henüz yok.
+**Üretilen V2 video:** [primer-v2-pilot.mp4](../artifacts/demo/primer-v2-pilot.mp4). Süre78,04sn, 720×1080; Türkçe açıklama yazıları var, ses yok. Yerel uygulama kaydıdır: ağ erişimi reddedildiğinden kayıt sunucusu yerel ONNX dosyasını seçer. Uygulama ve model baytları değişmez; model SHA'sı yayımlanmış HF modeliyle aynıdır. Bu kayıt canlı sitenin agent tarafından doğrulandığı anlamına gelmez.
+
+Kayıtta iki demo profili aynı sahnede p=.00862962 ve p=.90221643 ile farklı anlatım açar. 5+300 Python referansı gerçek tarayıcı ONNX/WASM ile karşılaştırılır, max fark1.1920928955078125e-7. Son bölümde hikâye profili ve karar/geri bildirim gösterilir. Oturumlar ve iki profil gerçek katılımcı kanıtı olarak sunulmaz. [Kayıt kanıtı](checks/2026-11-06-v2-demo/recording.json), [MP4 doğrulaması](checks/2026-11-06-v2-demo/encoded.json). Video tümüyle decode edilerek hata vermediği ve60–90sn aralığında olduğu kontrol edildi; örnek kareler görsel olarak incelendi.
+
+Yeniden üretim: proje build'i `/acilde-60-dakika/` tabanıyla hazırlanır; Playwright/Edge bulunan ortamda `node scripts/record-primer-v2-demo.cjs`, sonra FFmpeg bulunan ortamda `node scripts/render-primer-v2-demo.cjs` çalıştırılır. Araçlar bu çalışma ortamındaki kurulumu kullanır; taşınabilir ortamda Playwright ve FFmpeg ayrıca gerekir (`PRIMER_FFMPEG` ile FFmpeg yolu seçilebilir). Üretici uygulama dosyalarını düzenlemez ve olasılıkları stub etmez.
+
+Public video için MP4'ün hash'i aynı kopyası `public/demo/primer-v2-pilot.mp4` içine hazırlandı. Yeni Pages dağıtımı tamamlandığında [video adresi](https://qorbaniatefa.github.io/acilde-60-dakika/demo/primer-v2-pilot.mp4) kullanılacak; public erişim kontrolü hâlâ gerekiyor. Ücretsiz mevcut Pages barındırması kullanılır, ayrı hesap gerekmez.
+
+**Elle kayıt için önceki senaryo:** ONNX/config üretilmiş ve parite geçmiş olmalı. V1 videosu yeni ödevin iki model kararı şartını göstermez.
 
 | Zaman | Ekran ve anlatım |
 |---|---|

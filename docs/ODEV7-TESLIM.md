@@ -15,9 +15,9 @@ Etkin eğitimde **180 sentetik oturum / 540 satır** var. Tek kişinin oynadığ
 | Parite / regresyon | HF commit'li kaynakla Cypress **17/17** tekrar geçti; 5+300 girdide max fark1.1920929e-7. [Koşu kaydı](checks/2026-11-06-cypress-hf.json). |
 | HF yayını | **Tamamlandı:** Atefa/acilde-primer-v2-pilot, commit816ac3e612d7684e79ba6b2f28d6104e0e7c3139. Oturumsuz indirme/hash doğrulandı. |
 | Mimari / rollout / rollback | RELEASE hazır; uygulanmış gerçek üretim deneyi değil. |
-| GitHub | Eski V1 uzak depoda; entegrasyon yazma403. Kullanıcı tarafında kaynak aktarımı gerekli. |
-| Canlı uygulama | V2 aktarımı ve oturumsuz erişim kontrolü kaldı. |
-| V2 video | İki farklı gerçek model kararı gösteren 60–90sn kayıt/public link kaldı. |
+| GitHub | V2 commit651c4d1 kullanıcı tarafından gönderildi. |
+| Canlı uygulama | Pages build/deploy başarılı; kullanıcı canlı laboratuvarda 5 girdiyi <1e-4 toleransta doğruladı. [Kayıt](checks/2026-11-06-pages-deployment.json). |
+| V2 video | 78,04sn yerel MP4 üretildi: iki demo profilinde gerçek ONNX kararları,5/300 parite ve hikâye. Türkçe açıklama yazıları var, ses yok. `public/demo/` hazır; yeni Pages dağıtımı ve public erişim kontrolü bekliyor. [Hedef video bağlantısı](https://qorbaniatefa.github.io/acilde-60-dakika/demo/primer-v2-pilot.mp4). |
 | Sınav tasarımı / AI beyanı | Hazır; öğrencinin kendi görüşüyle incelemesi gerekiyor. |
 | Bonus sunucu | Yapılmadı, zorunlu değil. |
 
@@ -32,4 +32,4 @@ Etkin eğitimde **180 sentetik oturum / 540 satır** var. Tek kişinin oynadığ
 
 Geçmiş veri toplama ve başarısız gerçek eval kaydı [arşivlenmiştir](history/2026-11-05-ODEV7-before-pilot.md). Önceki .50 sonucu silinmez; daha sonra açıklanan rastgele etiketler nedeniyle gerçek tercih başarısı ölçümü olarak yorumlanmaz. Eski V1 `teslim/` paketi güncel V2 paketi değildir. `.env*`, `.venv`, `node_modules`, `.review-tools` ve uygulama dışı `test/images`/`test/labels` yüklenmez.
 
-6 Kasım hazırlık kanıtı: [sentetik pilot doğrulama kaydı](checks/2026-11-06-synthetic-pilot.json). HF girişi, yayın ve HF kaynaklı Cypress koşusu tamamlandı. Sıradaki adım kaynak klasöründe `npm.cmd run prepare:github`; ardından GitHub/canlı V2/video. Hesap bilgileri/token sohbetten gönderilmez.
+6 Kasım hazırlık kanıtı: [sentetik pilot doğrulama kaydı](checks/2026-11-06-synthetic-pilot.json). HF, GitHub V2, Pages dağıtımı, canlı 5 girdilik parite kontrolü ve yerel V2 demo kaydı tamamlandı. Video ve güncel belgeler son aktarım için hazırlandı. Sıradaki adım yeni commit'in gönderilmesi, Pages yayını ve [dört teslim bağlantısının](TESLIM-LINKLERI.md) giriş yapmadan kontrol edilmesi. Ardından teslim formu kullanıcı tarafından doldurulur. Hesap bilgileri/token sohbetten gönderilmez.

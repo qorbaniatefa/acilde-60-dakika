@@ -1,0 +1,24 @@
+{
+  "status": "encoded_and_decode_verified",
+  "path": "artifacts/demo/primer-v2-pilot.mp4",
+  "duration_seconds": 78.04,
+  "width": 720,
+  "height": 1080,
+  "audio": false,
+  "explanatory_captions": "burned_in_Turkish",
+  "local_recording": true,
+  "synthetic_pilot": true,
+  "bytes": 1435742,
+  "sha256": "f9b4349b1c007bf420c8d7ff66548c106715bb41f8fb4b2988cc6b72ab9d13c2",
+  "model_sha256": "7c2dc8cb9b45fa53e670cb4797b52123cb18d5f54df3aad732d80b6f813f64aa",
+  "parity_checks": [
+    {
+      "count": 5,
+      "max_delta": 1.1920928955078125e-7
+    },
+    {
+      "count": 300,
+      "max_delta": 1.1920928955078125e-7
+    }
+  ]
+}

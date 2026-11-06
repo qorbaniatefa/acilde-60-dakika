@@ -1,0 +1,18 @@
+{
+  "status": "prepared_not_yet_pushed",
+  "public_url": "https://qorbaniatefa.github.io/acilde-60-dakika/demo/primer-v2-pilot.mp4",
+  "public_source": "public/demo/primer-v2-pilot.mp4",
+  "build_output": "dist/demo/primer-v2-pilot.mp4",
+  "sha256": "f9b4349b1c007bf420c8d7ff66548c106715bb41f8fb4b2988cc6b72ab9d13c2",
+  "source_and_public_hash_match": true,
+  "pages_base_build_passed": true,
+  "python_tests_passed": 15,
+  "browser_verification": {
+    "environment": "Playwright Edge; local HTTP server serving the built MP4",
+    "duration_seconds": 78.04,
+    "width": 720,
+    "height": 1080,
+    "media_error": null
+  },
+  "public_access_verified": false
+}

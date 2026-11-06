@@ -80,7 +80,7 @@ npm.cmd run publish:pilot -- kullanici/acilde-primer-v2-pilot
 
 Linux/macOS giriş komutu `npm run login:hf`. Yardımcı betik resmi Python SDK'sının `login(token=..., add_to_git_credential=False)` yöntemini kullanır; token gizli terminal girdisinden alınır, komut argümanına veya Git'e yazılmaz. Opsiyonel `hf` CLI'sının eksik Click bağımlılığı bu yolda kullanılmaz. Token sohbetten istenmez. `publish:pilot` açık `--synthetic-pilot` bayrağını kullanır; eval, parite, veri/politika/model hash'leri ve tekrar eğitim kontrolü yine zorunludur. Varsayılan `publish:model` geçerli gerçek kullanıcı verisi istemeye devam eder.
 
-Başarılı pilot yüklemesi public model reposunda commit SHA döndürür; oturumsuz indirme ve hash doğrulanır. `public/model-release.json` tam 40 karakterli SHA'ya sabitlenir; istemci `main` kabul etmez. HF pilot yayını tamamlandı; uygulamanın V2 dağıtımı bekliyor.
+Başarılı pilot yüklemesi public model reposunda commit SHA döndürür; oturumsuz indirme ve hash doğrulanır. `public/model-release.json` tam 40 karakterli SHA'ya sabitlenir; istemci `main` kabul etmez. HF pilot yayını ve GitHub Pages V2 dağıtımı tamamlandı. Kullanıcının canlı laboratuvarda paylaştığı 5 referansın en büyük farkı1.19e-7; [yayın ve kontrol kaydı](docs/checks/2026-11-06-pages-deployment.json).
 
 GitHub aktarımında kaynak çalışma klasöründe `npm run prepare:github` kullanılır. Komut mevcut, temiz `teslim/github-yukleme` Git deposuna V2 kaynaklarını ve artefaktları hash kontrolüyle kopyalar; `.env.local` ve kurulum klasörlerini dışlar. Commit/push yapmaz. Ardından bu Git klasöründe değişiklikler incelenip kaydedilir ve gönderilir. GitHub **Settings → Pages → Source: GitHub Actions** seçilir. Hazır workflow depo alt yoluyla statik `dist` derlemesini yayınlar; Gemini tutor API'si bu statik dağıtımda bulunmaz. [Vite dağıtım rehberi](https://vite.dev/guide/static-deploy#github-pages).
 
@@ -88,10 +88,10 @@ GitHub aktarımında kaynak çalışma klasöründe `npm run prepare:github` kul
 
 | Kalem | Durum |
 |---|---|
-| [GitHub deposu](https://github.com/qorbaniatefa/acilde-60-dakika) | Uzak V1; entegrasyon yazma isteği 403 döndürdü, V2 aktarımı bekliyor |
+| [GitHub deposu](https://github.com/qorbaniatefa/acilde-60-dakika) | V2 yüklendi: 651c4d1; kullanıcı kendi Git CLI'sıyla gönderdi |
 | [Commit'li HF pilot modeli](https://huggingface.co/Atefa/acilde-primer-v2-pilot/tree/816ac3e612d7684e79ba6b2f28d6104e0e7c3139) | Yayınlandı; commit 816ac3e612d7684e79ba6b2f28d6104e0e7c3139 |
-| [Önceki AI Studio uygulaması](https://ai.studio/apps/ce35fb73-e633-48c7-b88f-e6629bf4015f) | V2 güncellemesi/oturumsuz erişim kontrolü bekliyor |
-| V2 demo | Henüz yok; eski V1 videosu yeni model demosu sayılmaz |
+| [Canlı V2 uygulaması](https://qorbaniatefa.github.io/acilde-60-dakika/) | Pages build/deploy başarılı; kullanıcı canlı laboratuvarda 5 parite sonucunu paylaştı |
+| [V2 demo videosu](https://qorbaniatefa.github.io/acilde-60-dakika/demo/primer-v2-pilot.mp4) | 78,04sn, Türkçe açıklama yazılı/sessiz yerel kayıt; iki gerçek ONNX kararı +5/300 parite +hikâye. `public/demo/` hazır; bu dosyayı içeren yeni Pages dağıtımı ve public erişim kontrolü bekliyor |
 
 Son tarih **6 Kasım 2026 23:59**, [form](https://forms.gle/pr9QVEfLJuaFiXw39). Dört link giriş yapmadan kontrol edilmeli. [Demo senaryosu](docs/primer-v2-demo.md) ve [sınav tasarımı](SINAV_TASARIMI.md) hazır; sınav metni öğrenci tarafından kendi görüşüyle gözden geçirilmeli. Bonus sunucu tüketicisi yapılmadı.
 
@@ -108,7 +108,7 @@ Son tarih **6 Kasım 2026 23:59**, [form](https://forms.gle/pr9QVEfLJuaFiXw39). 
 ## Coding agent beyanı
 
 1. **Codex:** Kullanıcının önceden seçtiği sağlık/yazılım hikâyesini korudu; V2 hedefini ve eşikleri önerip kodladı.
-2. **Codex:** Eğitim, veri toplama, ONNX tüketici, parite ve yayın araçlarını hazırladı. Bağımsız Codex incelemeleri UUID, eski tahmin, tekrarlanabilirlik ve runtime yükleme sorunlarını buldu; asistan düzeltti.
+2. **Codex:** Eğitim, veri toplama, ONNX tüketici, parite ve yayın araçlarını hazırladı. Bağımsız Codex incelemeleri UUID, eski tahmin, tekrarlanabilirlik ve runtime yükleme sorunlarını buldu; asistan düzeltti. Kullanıcının isteğiyle Playwright/Edge ve FFmpeg kullanarak açıklama yazılı V2 demo videosunu yerelde kaydetti; ONNX çıktıları kayıt sırasında hesaplandı.
 3. **Kullanıcı:** Runtime komutunu ve Cypress'i kendi PowerShell'inde çalıştırıp çıktıları paylaştı; bütün insan oyunlarını kendisinin oynadığını ve hedefleri rastgele seçtiğini açıkladı. Veri durumu bu beyana göre düzeltildi.
-4. **Codex:** Rastgele etiketli satırları koruyup dışladı; kullanıcı sentetik pilotu seçti. Gerçek başarı, üç gönüllü veya yeni video iddiası üretilmedi. Postman API Engineer becerisi sözleşme ve kanıt ayrımını yönlendirdi.
+4. **Codex:** Rastgele etiketli satırları koruyup dışladı; kullanıcı sentetik pilotu seçti. Gerçek kullanıcı başarısı veya üç gönüllü iddiası üretilmedi. Postman API Engineer becerisi sözleşme ve kanıt ayrımını yönlendirdi.
 5. **İnsan incelemesi:** V2 kodu/sınav metni için öğrencinin elle yaptığı içerik düzeltmeleri henüz belgelenmedi. Öğrencinin kavramları öğrenip açıklaması ve metni kendi görüşüyle incelemesi bekleniyor.

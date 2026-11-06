@@ -1,0 +1,27 @@
+{
+  "status": "preflight_passed",
+  "source": "actual_local_static_build",
+  "synthetic_pilot": true,
+  "probabilities_stubbed": false,
+  "model_sha256": "7c2dc8cb9b45fa53e670cb4797b52123cb18d5f54df3aad732d80b6f813f64aa",
+  "published_hf_revision": "816ac3e612d7684e79ba6b2f28d6104e0e7c3139",
+  "network_note": "Hosted site unavailable to agent browser (ERR_NETWORK_ACCESS_DENIED). Local server selects local model files; app and ONNX bytes are unchanged.",
+  "viewport": {
+    "width": 720,
+    "height": 960
+  },
+  "checks": [
+    {
+      "count": 5,
+      "max_delta": 1.1920928955078125e-7
+    },
+    {
+      "count": 300,
+      "max_delta": 1.1920928955078125e-7
+    }
+  ],
+  "events": [],
+  "pageErrors": [],
+  "short_probability": 0.00862962,
+  "deep_probability": 0.90221643
+}

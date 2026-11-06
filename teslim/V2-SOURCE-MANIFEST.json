@@ -17,8 +17,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 12240,
-      "sha256": "5011f0dfa7ea418461c975e98a306239d65e100a8df4e1da030c6c5321b56dfb"
+      "bytes": 12825,
+      "sha256": "072d5d750fdbca7629ba82b89f81f06caf0cae723600588aba18bef8fb9d38b5"
     },
     {
       "path": "RELEASE.md",
@@ -141,6 +141,16 @@
       "sha256": "896bf10240f53d290935447038a15347129d521a11d95095b2e9533d76af563e"
     },
     {
+      "path": "artifacts/demo/primer-v2-pilot.ass",
+      "bytes": 1955,
+      "sha256": "ce0088dbe236abb6687d899e851645af298c274b8d0369c9330fd20f31d84af2"
+    },
+    {
+      "path": "artifacts/demo/primer-v2-pilot.mp4",
+      "bytes": 1435742,
+      "sha256": "f9b4349b1c007bf420c8d7ff66548c106715bb41f8fb4b2988cc6b72ab9d13c2"
+    },
+    {
       "path": "artifacts/primer-v2/browser-parity.json",
       "bytes": 5152,
       "sha256": "8cf10958de220cf270f61a324f030dfed34b9bcc38f18fd69a549f80334f9cf0"
@@ -217,8 +227,13 @@
     },
     {
       "path": "docs/ODEV7-TESLIM.md",
-      "bytes": 3753,
-      "sha256": "b2009b940c069018dfa1a24620b824b8abae9f8fd58fea688270519b54f6b40f"
+      "bytes": 4278,
+      "sha256": "5f788df57b2f4da9267d00d862d813f578e6454af70b26983d2a54c8652a12f7"
+    },
+    {
+      "path": "docs/TESLIM-LINKLERI.md",
+      "bytes": 1298,
+      "sha256": "aa635fa82961278e2a4437827e44430349c6ba998bca90d159664cbdbc6dd642"
     },
     {
       "path": "docs/ai-studio-prompt.md",
@@ -267,13 +282,13 @@
     },
     {
       "path": "docs/primer-v2-demo.md",
-      "bytes": 1320,
-      "sha256": "0caececd6dba8bd7b6d164a0933ce0ddfa1d7774cea70e93570081388fb81f66"
+      "bytes": 3209,
+      "sha256": "51603249645a76e956fda5996e57373568191696927472908816bcbfdbf32e77"
     },
     {
       "path": "docs/primer-v2-progress.md",
-      "bytes": 9312,
-      "sha256": "82acab03837030c33d87394dcc9fc3246fbcdb444807fcff07973f49eea4b713"
+      "bytes": 10982,
+      "sha256": "25ec54fbb7c6d6595810f8d6dae0a7e041c8d3810e582945a56c6c62a52e4d07"
     },
     {
       "path": "docs/source-review.md",
@@ -349,6 +364,11 @@
       "path": "docs/checks/2026-11-06-hf-publication.json",
       "bytes": 1309,
       "sha256": "9cc834211fe99cf8dcd809ec726cc18a26193f1c0ce93e4d86156fbd351cd6aa"
+    },
+    {
+      "path": "docs/checks/2026-11-06-pages-deployment.json",
+      "bytes": 1121,
+      "sha256": "1bc0799291287564f791116bc11f1dba7f84c97c8693ab469725b81b7b834cf2"
     },
     {
       "path": "docs/checks/2026-11-06-synthetic-pilot.json",
@@ -449,6 +469,71 @@
       "path": "docs/checks/2026-11-01-demo/verification.json",
       "bytes": 803,
       "sha256": "87c495d98c640a1362a8471eae8ae9565c78c5c3b7c8892b35850a138e6b208d"
+    },
+    {
+      "path": "docs/checks/2026-11-06-v2-demo/01-short.png",
+      "bytes": 26018,
+      "sha256": "e56773797a5739569dfa213b0af5d466afe16e02910237f7a16e893e1071e45f"
+    },
+    {
+      "path": "docs/checks/2026-11-06-v2-demo/02-deep.png",
+      "bytes": 37690,
+      "sha256": "20bc6477d19a29eed12312d17097aba26ee48e40e01dd8ef5f7bb0c677a1a361"
+    },
+    {
+      "path": "docs/checks/2026-11-06-v2-demo/03-parity-5.png",
+      "bytes": 48883,
+      "sha256": "957cade101829ae12a97d3ee9022b7a379bc018752d6e2a305d22ae7055a1d4c"
+    },
+    {
+      "path": "docs/checks/2026-11-06-v2-demo/04-parity-300.png",
+      "bytes": 79594,
+      "sha256": "0c615056500ee244665378fb19e674ad7a4c52d3fbb487986d939d64e02d45eb"
+    },
+    {
+      "path": "docs/checks/2026-11-06-v2-demo/05-story-feedback.png",
+      "bytes": 52346,
+      "sha256": "f12b2ca5ec521fa67f979e70665f3bd6dadc5df79875fdeb4159d0bfaaa3b89b"
+    },
+    {
+      "path": "docs/checks/2026-11-06-v2-demo/encoded-deep.png",
+      "bytes": 276034,
+      "sha256": "eca3281550f91ff7133f330917526595189676e1e5fa6a67851bdb236f30d048"
+    },
+    {
+      "path": "docs/checks/2026-11-06-v2-demo/encoded-parity.png",
+      "bytes": 360937,
+      "sha256": "83a20173287d784ce58bde8540ae4a9dc101fbd5facdab71793405d68aacf6c3"
+    },
+    {
+      "path": "docs/checks/2026-11-06-v2-demo/encoded-short.png",
+      "bytes": 178433,
+      "sha256": "39672cb1d24438c701a468930e6743b4af8d8914c44d0e1b500c9c8e333603fa"
+    },
+    {
+      "path": "docs/checks/2026-11-06-v2-demo/encoded-story.png",
+      "bytes": 260008,
+      "sha256": "6688cc3aec9d66843168ddfa571de2bd3f57f0f206549be22112f5edddbb9095"
+    },
+    {
+      "path": "docs/checks/2026-11-06-v2-demo/encoded.json",
+      "bytes": 633,
+      "sha256": "b7f9a4b935f94c580bb43170bb56c92cbc0dfe0c95ef7fdbc99052cdb58ef7b8"
+    },
+    {
+      "path": "docs/checks/2026-11-06-v2-demo/preflight.json",
+      "bytes": 785,
+      "sha256": "053bcb31eb434eaefa335573c09c579a1c575ea0f67024134f35be51e63f4419"
+    },
+    {
+      "path": "docs/checks/2026-11-06-v2-demo/publication-preparation.json",
+      "bytes": 663,
+      "sha256": "913a8d10ab9f1a16c3634cf9d6b1c6ae74b8795fa9b7d476f79b22ea4d13fdf7"
+    },
+    {
+      "path": "docs/checks/2026-11-06-v2-demo/recording.json",
+      "bytes": 1478,
+      "sha256": "cde2ad40bcf56c17cf2cdeb4890a7d2517991dd96f54ae79fc2108b78f707405"
     },
     {
       "path": "docs/history/2026-11-05-ODEV7-before-pilot.md",
@@ -746,6 +831,11 @@
       "sha256": "42b3a1ca9312fb603a978bfd2ca592c4952536188e99c16113e656650edd9642"
     },
     {
+      "path": "public/demo/primer-v2-pilot.mp4",
+      "bytes": 1435742,
+      "sha256": "f9b4349b1c007bf420c8d7ff66548c106715bb41f8fb4b2988cc6b72ab9d13c2"
+    },
+    {
       "path": "public/model/config.json",
       "bytes": 10786,
       "sha256": "ab88c20ea59fba46d9fb85e3c4ca116ec6c451d2e3b1c39547739d149dae7e03"
@@ -847,8 +937,8 @@
     },
     {
       "path": "scripts/prepare_github_upload.py",
-      "bytes": 5227,
-      "sha256": "ac6161858d5b9bad3838fecac46baeaf8c337bdcc29a4f0239f90b319fc9aee4"
+      "bytes": 5235,
+      "sha256": "dcedccc198c19f5d72916dacc5f2927e0606bedeced42d5075fb60da9d08c811"
     },
     {
       "path": "scripts/probe-model.ts",
@@ -859,6 +949,16 @@
       "path": "scripts/publish-model.py",
       "bytes": 4864,
       "sha256": "89b889281757fd626f69f4cde5e571e9077929576054b59d76f4b8b27d62d3f9"
+    },
+    {
+      "path": "scripts/record-primer-v2-demo.cjs",
+      "bytes": 11980,
+      "sha256": "8bb936f787b4e77dbb8408621a8b0c3ff705873c8b113ad23edf00c9400c10e3"
+    },
+    {
+      "path": "scripts/render-primer-v2-demo.cjs",
+      "bytes": 2952,
+      "sha256": "eda415d8f0014b97423110557ea3925ac8eee3466825a9cc0810a23cd95959f0"
     },
     {
       "path": "scripts/resume-eval-local.cjs",
