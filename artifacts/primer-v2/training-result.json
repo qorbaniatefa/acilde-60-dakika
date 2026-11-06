@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-04",
+  "source": "console output from npm run setup:ml, npm run train -- --output .review-tools/repro-v2, npm run parite",
+  "evaluation_source": "sentetik",
+  "real_sessions": 0,
+  "synthetic_sessions": 180,
+  "metrics": {"balanced_accuracy": 0.7686170212765957, "support_recall": 0.75, "confusion_matrix": [[37, 10], [22, 66]]},
+  "sklearn_onnx_max_absolute_error": 1.2336379606736614e-7,
+  "model_sha256_from_generated_model_card": "7c2dc8cb9b45fa53e670cb4797b52123cb18d5f54df3aad732d80b6f813f64aa",
+  "second_training_metrics_equal": true,
+  "second_training_model_bytes_equal": null,
+  "python_oracle": {"reference_cases": 5, "extra_cases": 300, "max_absolute_error": 0},
+  "browser_onnx_parity_verified": false,
+  "release_eligible": false,
+  "limitations": ["Synthetic evaluation does not validate human learning or preferences", "Byte/hash reproducibility check blocked by filesystem permission", "Browser runtime download blocked", "Cypress runner blocked", "No human sessions fabricated"]
+}

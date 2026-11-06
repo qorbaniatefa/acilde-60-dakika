@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { AdaptiveSupport } from './AdaptiveSupport';
+import { buildFeatures, recordDecision, type DecisionRecord, type FeatureVector } from '../ml/behavior';
 import {
   MessageSquare,
   Server,
@@ -27,6 +29,11 @@ interface SceneScreenProps {
   isChoiceLocked: boolean;
   onMakeChoice: (choice: ChoiceOption) => void;
   onContinue: () => void;
+  collectionConsent: boolean;
+  sessionId: string;
+  onRecord: (row: DecisionRecord) => void;
+  hintRequests: number;
+  onTutorRequest: () => void;
 }
 
 export const SceneScreen: React.FC<SceneScreenProps> = ({
@@ -36,8 +43,39 @@ export const SceneScreen: React.FC<SceneScreenProps> = ({
   isChoiceLocked,
   onMakeChoice,
   onContinue,
+  collectionConsent,
+  sessionId,
+  onRecord,
+  hintRequests,
+  onTutorRequest,
 }) => {
   const currentChoice = choices[decision.id];
+  const [elapsed, setElapsed] = useState(0);
+  const edits = useRef(0);
+  const previousHints = useRef(hintRequests);
+  const startedAt = useRef(performance.now());
+  const [pendingChoice, setPendingChoice] = useState<ChoiceOption | null>(null);
+  const snapshot = useRef<FeatureVector | null>(null);
+  const features = snapshot.current ?? buildFeatures(elapsed, edits.current, choices, previousHints.current, decision.id, profile.level);
+  useEffect(() => {
+    if (isChoiceLocked || pendingChoice) return;
+    const timer = setInterval(() => setElapsed(Math.min(180, Math.round((performance.now() - startedAt.current) / 1000))), 2000);
+    return () => clearInterval(timer);
+  }, [isChoiceLocked, pendingChoice]);
+  const choose = (choice: ChoiceOption) => {
+    if (isChoiceLocked || pendingChoice) return;
+    snapshot.current = buildFeatures(Math.round((performance.now() - startedAt.current) / 1000 * 100) / 100,
+      edits.current, choices, previousHints.current, decision.id, profile.level);
+    if (collectionConsent) setPendingChoice(choice);
+    else onMakeChoice(choice);
+  };
+  const labelDecision = (label: 0 | 1) => {
+    if (!pendingChoice || !snapshot.current) return;
+    const row = recordDecision(collectionConsent, sessionId, snapshot.current, label);
+    if (row) onRecord(row);
+    onMakeChoice(pendingChoice);
+    setPendingChoice(null);
+  };
 
   // AI Tutor state
   const [thoughtInput, setThoughtInput] = useState('');
@@ -81,6 +119,7 @@ export const SceneScreen: React.FC<SceneScreenProps> = ({
     e.preventDefault();
     const clean = thoughtInput.trim();
     if (!clean || clean.length > 2000 || tutorLoading) return;
+    onTutorRequest();
 
     // Cancel existing
     if (abortControllerRef.current) {
@@ -266,6 +305,7 @@ export const SceneScreen: React.FC<SceneScreenProps> = ({
       </section>
 
       {/* Decision Choice Actions */}
+      <AdaptiveSupport features={features} decision={decision} collection={collectionConsent} />
       <section className="space-y-3 pt-1">
         <div className="space-y-1">
           <div className="text-xs font-mono uppercase tracking-wider text-[#ffd8af]">
@@ -281,8 +321,8 @@ export const SceneScreen: React.FC<SceneScreenProps> = ({
           <button
             type="button"
             data-cy="choice-A"
-            onClick={() => onMakeChoice('A')}
-            disabled={isChoiceLocked}
+            onClick={() => choose('A')}
+            disabled={isChoiceLocked || Boolean(pendingChoice)}
             className={`w-full min-h-[56px] p-3.5 rounded-lg border text-left transition-all flex items-start space-x-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd8af] ${
               currentChoice === 'A'
                 ? 'bg-[#2c3546] border-[#ffb454] ring-2 ring-[#ffb454] text-[#ffd8af]'
@@ -314,8 +354,8 @@ export const SceneScreen: React.FC<SceneScreenProps> = ({
           <button
             type="button"
             data-cy="choice-B"
-            onClick={() => onMakeChoice('B')}
-            disabled={isChoiceLocked}
+            onClick={() => choose('B')}
+            disabled={isChoiceLocked || Boolean(pendingChoice)}
             className={`w-full min-h-[56px] p-3.5 rounded-lg border text-left transition-all flex items-start space-x-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd8af] ${
               currentChoice === 'B'
                 ? 'bg-[#2c3546] border-[#ffb454] ring-2 ring-[#ffb454] text-[#ffd8af]'
@@ -346,6 +386,15 @@ export const SceneScreen: React.FC<SceneScreenProps> = ({
       </section>
 
       {/* Socratic AI Tutor Card */}
+      {pendingChoice && <section data-cy="support-label" className="rounded-lg border border-[#ffb454] p-4 space-y-3">
+        <h3 className="font-bold">Sonucu görmeden önce</h3>
+        <p>Bu sahnede daha ayrıntılı bir açıklama ister miydin?</p>
+        <div className="flex gap-4">
+          <button data-cy="label-yes" onClick={() => labelDecision(1)} className="underline">Evet</button>
+          <button data-cy="label-no" onClick={() => labelDecision(0)} className="underline">Hayır</button>
+        </div>
+        <p className="text-xs">Doğru veya yanlış yanıt yok; yalnız öğrenme tercihin ölçülür.</p>
+      </section>}
       <section className="p-4 rounded-lg bg-[#172030] border border-[#212a3b] space-y-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
@@ -375,7 +424,7 @@ export const SceneScreen: React.FC<SceneScreenProps> = ({
               rows={2}
               maxLength={2000}
               value={thoughtInput}
-              onChange={(e) => setThoughtInput(e.target.value)}
+              onChange={(e) => {edits.current = Math.min(60, edits.current + 1); setThoughtInput(e.target.value);}}
               placeholder="Nasıl düşündüğünü yaz..."
               className="w-full p-2.5 rounded-lg bg-[#2c3546] border border-[#212a3b] text-[#dae2f9] placeholder-[#9f8e7d] text-base focus:border-[#ffb454] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#ffb454] resize-none"
             />

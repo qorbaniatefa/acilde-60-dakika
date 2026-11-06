@@ -1,0 +1,62 @@
+{
+  "tool": "Playwright/Edge",
+  "modelInferenceTested": false,
+  "checks": [
+    {
+      "name": "path-AAA",
+      "passed": true
+    },
+    {
+      "name": "path-AAB",
+      "passed": true
+    },
+    {
+      "name": "path-ABA",
+      "passed": true
+    },
+    {
+      "name": "path-ABB",
+      "passed": true
+    },
+    {
+      "name": "path-BAA",
+      "passed": true
+    },
+    {
+      "name": "path-BAB",
+      "passed": true
+    },
+    {
+      "name": "path-BBA",
+      "passed": true
+    },
+    {
+      "name": "path-BBB",
+      "passed": true
+    },
+    {
+      "name": "incomplete-profile",
+      "passed": true
+    },
+    {
+      "name": "experienced-profile-and-tutor-error",
+      "passed": true,
+      "simulated": "tutor HTTP 503 only"
+    },
+    {
+      "name": "missing-model-and-no-consent",
+      "passed": true
+    },
+    {
+      "name": "consented-complete-session-export-no-text",
+      "passed": true,
+      "syntheticAutomationOnly": true
+    },
+    {
+      "name": "desktop-good-ending",
+      "passed": true
+    }
+  ],
+  "pageErrors": [],
+  "status": "passed"
+}

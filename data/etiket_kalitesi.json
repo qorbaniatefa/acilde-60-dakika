@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-06",
+  "active_mode": "synthetic_pilot",
+  "reason": "User stated that one person played all sessions and selected preference labels randomly.",
+  "participant_count_reported": 1,
+  "label_quality": "invalid_random_preference_labels",
+  "behavior_source_preserved": "gercek",
+  "labels_modified": false,
+  "archive": "data/arsiv/tek-oyuncu-rastgele-etiketler.csv",
+  "excluded_sessions": 15,
+  "excluded_rows": 45,
+  "excluded_session_ids": [
+    "0e123ce2-c86e-4f6f-ba6a-693d20248b8d",
+    "0f378496-fd0d-4422-ac16-b25176be642f",
+    "37c7bae4-a89c-4f6e-8462-552d270883ae",
+    "3e3f3198-2a8f-4375-b44a-2a2318e63044",
+    "42e2edc9-a10d-4a24-90c8-d126abb8bbf8",
+    "568c3b6c-1886-4fea-b492-96c0f66dbdd6",
+    "590c4c7b-bf74-4724-98c5-f4b6c66204f3",
+    "5cc70b73-eff0-4bbf-8f27-98f252d1b709",
+    "62755055-b1bd-49e6-ad22-0387d00c02cd",
+    "75cf023f-80d6-4f93-a42c-ecd79163ec86",
+    "7b0a4d0d-6086-4441-b79b-d34d384e62b3",
+    "8bad1482-cc04-4ba7-98bc-af49072f8070",
+    "c4966c3c-50ff-4083-af68-2bae411bf66d",
+    "d696f11e-e2dd-4549-a6e1-b6203cbea34f",
+    "f0587ff4-4145-4904-bf9b-4facfdc8ec45"
+  ],
+  "active_rows": 540,
+  "active_source": "sentetik",
+  "archive_sha256": "4eff190a51423f5db4662f3adc7a32666bf16717eb76e8ad8b006e06aac9d7a4"
+}

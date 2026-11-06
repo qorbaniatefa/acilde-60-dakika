@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-04",
+  "status": "synthetic_model_trained_external_steps_blocked",
+  "training": {
+    "command": "npm run setup:ml",
+    "exit_code": 0,
+    "evaluation_source": "sentetik",
+    "balanced_accuracy": 0.7686170212765957,
+    "support_recall": 0.75,
+    "confusion_matrix": [[37, 10], [22, 66]],
+    "sklearn_onnx_max_absolute_error": 1.2336379606736614e-7,
+    "second_training_metrics_equal": true,
+    "second_training_binary_equal": null,
+    "binary_comparison_blocker": "Sandbox read denied for newly created model.onnx/config.json",
+    "reference": "artifacts/primer-v2/training-result.json"
+  },
+  "verification": {
+    "vitest": {"tests": 58, "files": 7, "exit_code": 0},
+    "python_tests": {"tests": 9, "exit_code": 0, "includes_real_training_rejection_and_artifact_preservation": true},
+    "lint": {"exit_code": 0},
+    "build": {"exit_code": 0},
+    "python_oracle": {"cases": [5, 300], "max_absolute_error": 0, "exit_code": 0},
+    "browser_parity": {"verified": false, "reason": "CDN request net::ERR_NETWORK_ACCESS_DENIED; local runtime download not completed"},
+    "cypress": {"exit_code": 1, "tests_executed": false, "reason": "ERR_SYSTEM_ERROR / ENOMEM / uv_os_get_passwd"}
+  },
+  "publication": {
+    "github_source_entries_prepared": 49,
+    "github_write_attempt": "create_tree",
+    "github_write_result": "403 Resource not accessible by integration",
+    "github_branch_created": false,
+    "github_main_changed": false,
+    "hf_authenticated": false,
+    "hf_published": false,
+    "live_v2_published": false,
+    "demo_v2_recorded": false
+  },
+  "data": {"real_sessions": 0, "synthetic_sessions": 180, "synthetic_rows": 540},
+  "approval_review": {"action": "install ONNX Runtime with escalated execution", "result": "rejected", "reason": "sandbox_approval disabled by granular approval policy"},
+  "review": {"important_finding": "Optional runtime probe must preserve CDN fallback on timeout/network/JSON error", "fixed": true, "regression_tests_added": 2}
+}

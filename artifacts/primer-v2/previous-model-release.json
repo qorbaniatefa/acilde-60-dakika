@@ -1,0 +1,6 @@
+{
+  "source": "local",
+  "status": "synthetic_pilot",
+  "note": "Model training must succeed before local artifacts become available. HF publication is gated on 15 complete real sessions.",
+  "model_sha256": "7c2dc8cb9b45fa53e670cb4797b52123cb18d5f54df3aad732d80b6f813f64aa"
+}

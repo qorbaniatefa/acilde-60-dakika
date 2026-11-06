@@ -1,0 +1,47 @@
+# Primer v2 ilerleme kaydı
+
+Plan: `docs/superpowers/plans/2026-11-04-primer-v2.md`
+
+- 4 Kasım: v1 kaynağı ve önceki oturum dökümü incelendi; root Git deposu değil.
+- Karar: mevcut onaylı React hikâyesini genişlet; yeni site veya API gerekmez.
+- Eğitimden önce politika ve üç kabul örneği yazıldı.
+- Ortam engeli: Python HTTPS soketi WinError 10013; pip bağımlılık indiremiyor. Eğitim çalıştırılmış sayılmaz.
+- Gerçek veri: henüz sağlanmadı; kullanıcıya soruldu. Sentetik kaynak açıkça işaretlenecek.
+- Veri hazır: 180 sentetik oturum/540 satır, 0 gerçek. UUIDv4/v5 şeması, tam oturum ve rıza akışı uygulanmış durumda.
+- Eğitim/çıkarım/oracle/yayın kodu yazıldı; ONNX/ölçülmüş config bağımlılık eksikliğinden üretilemedi.
+- İnceleme düzeltmeleri: UUID alanında kişisel kimliği reddet; tahmini özellik anahtarına bağla; paralel pariteyi kilitle; veri silerken etkin oturum taslağını koru; ONNX grafiğine sabit isim ver (rastgele exporter adı hash'i değiştirmesin).
+- Doğrulama: 56 Vitest, 8 Python unittest, lint/build geçti; Playwright/Edge'de 13 akış kontrolü geçti, sayfa hatası 0.
+- Cypress yeniden koşu engeli: Windows uv_os_get_passwd ERR_SYSTEM_ERROR/ENOMEM. Önceki 12 test korunuyor, güncel Cypress koşusu geçmiş sayılmaz.
+- Task 1: Kod ve sentetik veri hazır; gerçek eğitim/eval/parite bekliyor.
+- Task 2: Toplama/hata durumunda hikâye doğrulandı; gerçek ONNX ile adaptasyon bekliyor.
+- Task 3: Teslim belgeleri ve testler hazır; HF/canlı V2/video/gerçek veri eksik.
+- Devam oturumu: npm setup:ml ile paketler kuruldu ve gerçek sklearn→ONNX eğitimi çalıştı. Balanced accuracy=.7686170212765957, recall=.75; max sklearn/ONNX fark=1.2336379606736614e-7.
+- Python oracle 5+300 doğrulaması geçti (fark=0). İkinci eğitim metrikleri aynı; dosya hash eşitliği okuma izni nedeniyle doğrulanamadı. Önceki erken hash eşitliği ifadesi kullanıcıya düzeltilerek bildirildi.
+- Tarayıcı CDN indirmesi engelli, npm runtime indirmesi DNS hatasıyla bitti. İzin yükseltme otomatik politika tarafından reddedildi; başka yollarla izin engeli aşılmadı.
+- Yerel runtime hazırlama kodu eklendi, indirme/çıkarım doğrulanmış sayılmaz. Gerçek oturum ve HF auth hâlâ yok; yayın ve video tamamlanmadı.
+- Son doğrulama: 58 Vitest, 9 Python testi (gerçek eğitim reddi/artefakt koruma dahil), lint/build geçti. Runtime fallback hatası bağımsız incelemede bulundu, iki testle düzeltildi.
+- GitHub kaynak ağacı yazımı 403 Resource not accessible by integration ile reddedildi; main/dal güncellenmedi. 49 kaynak değişikliği yalnız yerelde hazırlanmış durumda.
+- Kullanıcının normal PowerShell koşusunda iki JS dosyası indi, büyük WASM dosyası hem 30 sn hem 5 dk toplam zaman aşımına takıldı. Vendor betiği mevcut dosyaları koruyacak, WASM için önce UNPKG'yi deneyecek, akışı diske yazıp MB ilerlemesi gösterecek ve yalnız 30 sn veri gelmediğinde diğer kaynağa geçecek şekilde güncellendi. Eksik/HTML yanıtlarında dosya ve manifest yayınlanmaz. Yeni 3 test geçti; gerçek dış indirme henüz doğrulanmadı.
+- Kullanıcı runtime indirmesini tamamladı: WASM 12,361,745 byte. Vite, kök bağıl dinamik importa ?import eklediği için public modülünü reddediyordu. Yerel runtime yolu tam URL'ye çevrildi; önce başarısız regresyon görüldü, düzeltmeden sonra 61 test/lint/build geçti.
+- Gerçek Edge/WASM kontrolü (ayrı 3107 test sunucusu): 5 ve 300 Python girdisi max fark=1.1920928955078125e-7 ile geçti. Destek olasılıkları .00862962 ve .90221643; ek açıklama davranışı değişti; Vite hata overlay'i yok. Kanıt docs/checks/2026-11-04-runtime-browser.json. Bu Playwright kanıtı Cypress regresyon koşusu diye sunulmaz.
+- Kullanıcı normal PowerShell'de Cypress'i çalıştırdı: adventure.cy.ts 12/12 ve model.cy.ts 5/5, toplam17/17, hata0, yaklaşık39sn. model.cy.ts.mp4 ve browser-parity.json yerel dosya metadatasıyla mevcut. Ayrı kanıt docs/checks/2026-11-04-cypress-v2.json; bu koşu kullanıcı konsol çıktısına dayanır. Sıradaki aşama 15 gerçek gönüllü oturumu.
+- 5 Kasım: Kullanıcının Downloads/primer-gercek-oturumlar.csv dosyası doğrulandı ve merge-data.py ile birleştirildi. 1 tamamlanmış gerçek oturum/3 karar; toplam543 satır (540 sentetik+3 gerçek), 181 oturum. Eğitim henüz yenilenmedi; mevcut model ve metrikleri eski sentetik pilotu tanımlar. Kalan14 gerçek oturum.
+- 5 Kasım: (1)–(5) CSV'lerinin tümü geçerli üç satır içeriyor fakat hepsi aynı ikinci oturum UUID'sine sahip. Tekilleştirme beş dosyadan yalnız1 yeni oturum ekledi. Toplam2 gerçek oturum/6 gerçek satır, 180 sentetik oturum/540 satır; toplam546 satır. Gerçek etiketlerin altısı da1; etiketler değiştirilmedi. Kalan13 gerçek oturum. Her yeni oturumda yeniden başlatma ve üç kararın yeniden tamamlanması gerekiyor.
+
+- 5 Kasım: (6).csv doğrulandı; önceki kayıtlardan farklı bir tamamlanmış gerçek oturum eklendi. Toplam3 gerçek oturum/9 gerçek satır, toplam549 satır. Kalan12 oturum; model henüz yeniden eğitilmedi.
+
+- 5 Kasım: (7).csv bir oturum, (8).csv iki oturum içeriyor; ortak kayıt tekilleştirildi ve iki yeni gerçek oturum eklendi. Toplam5 gerçek oturum/15 gerçek karar, 555 toplam satır. Kalan10 gerçek oturum.
+
+- 5 Kasım: (9).csv üç oturum, (10).csv dört oturum içeriyor; ilk dosyadaki oturumlar ikinci dosyada da bulunduğundan dört yeni gerçek oturum eklendi. Toplam9 gerçek oturum/27 gerçek karar, 567 toplam satır. Kalan6 gerçek oturum; model henüz yeniden eğitilmedi.
+
+- 5 Kasım: (11).csv bir yeni tamamlanmış gerçek oturum içeriyor; doğrulandı ve eklendi. Toplam10 gerçek oturum/30 gerçek karar, 570 toplam satır. Kalan5 gerçek oturum; model henüz yeniden eğitilmedi.
+
+- 5 Kasım: (12)-(16) CSV dosyaları doğrulandı. Aynı/ortak oturumlar tekilleştirilince üç yeni gerçek oturum eklendi. Toplam13 gerçek oturum/39 gerçek karar, 579 toplam satır. Kalan2 gerçek oturum; 15 sınırına ulaşılmadığı için yeniden eğitim başlatılmadı.
+
+- 5 Kasım: (17).csv ve (18).csv ortak oturumları tekilleştirilerek iki yeni gerçek oturum eklendi. 15 gerçek oturum/45 gerçek karar hedefi tamamlandı; 180 sentetik oturumla birlikte toplam585 satır. split_sessions gerçek test ayrımını başarıyla oluşturdu. Eğitim henüz çalıştırılmadı; eski pilot metrikleri yeni veri ölçümü değildir.
+- 5 Kasım: Kullanıcının gerçek eğitim denemesi balanced_accuracy=.50 ile eval kapısında durdu. Kabul eşiği .75 ve diğer kurallar değiştirilmedi. Tanı için npm run diagnose:ml eklendi: yalnız eğitim bölümünde üç katlı oturum ayrımıyla mixed=.50, real-only=.435185 ölçüldü; final holdout tekrar skorlanmadı. Gerçek eğitimde düzenleme/ipucu sayaçları sabit0; 33 gerçek ve540 sentetik eğitim satırı var. Yeni model yayınlanmadı. Sonraki ihtiyaç oyuncunun açıklama tercihinin gerekçesini anlamak; rastgele ayar/etiket değişimi yapılmadı.
+- 6 Kasım düzeltmesi: Kullanıcı bütün insan oturumlarını kendisinin oynadığını ve hedef Evet/Hayır'ları rastgele seçtiğini açıkladı. Önceki üç gönüllü planı uygulanmış sayılmaz. Kullanıcı yalnız sentetik pilotu seçti. 45 davranış satırı ve585 satırlık tam eski CSV korunarak arşivlendi; etkin veri540 sentetik. Dışlanan UUID'ler etiket kalite kaydıyla eğitim/yayından korunuyor.
+- Pilot2.0.0-pilot yeniden eğitildi: balanced accuracy=.7686170212765957, recall=.75, max sklearn/ONNX fark=1.2336379606736614e-7. İkinci koşu aynı modelSHA7c2dc8cb... ve metrikleri bildirdi. Geçerli eski 5+300 tarayıcı kanıtı aynı modelSHA ile eşleşti; Pythonoracle tekrar geçti. 61JS+14Python testi, lint/build başarılı. Bağımsız pilot incelemesinde önemli bulgu yok. Açık publish:pilot yolu hazır; HF giriş/yükleme, canlı V2 ve demo henüz tamamlanmadı.
+- HF profil kullanıcı adı Atefa olarak kullanıcı tarafından paylaşıldı. hf auth login komutu CLI yardımcı modülünde eksik Click nedeniyle giriş ekranına ulaşamadı. Kurulu SDK'nın login fonksiyonu importsuz CLI bağımlılığından bağımsız olarak doğrulandı; gizli getpass girdisiyle token'ı yalnız SDK'ya veren npm run login:hf yardımcısı eklendi. Agent token almadı, giriş yapıldığını iddia etmedi.
+- 6 Kasım: Kullanıcı SDK girişini Atefa hesabıyla tamamladı; publish:pilot başarıyla yüklendi. HF commit816ac3e612d7684e79ba6b2f28d6104e0e7c3139, modelSHA7c2dc8cb...; oturumsuz indirme ve hash eşitliği yayın betiğiyle doğrulandı. Yerel HF manifesti ve yayın kaydı okundu. Hata testi hem yerel/HF yolunda kullanılan manifest503'e taşındı. Sıradaki kullanıcı adımı HF manifestiyle Cypress'i tekrar çalıştırmak. Public V2 ve video henüz yok.
+- 6 Kasım: Kullanıcı HF manifestiyle Cypress'i yeniden çalıştırdı: 12 hikâye +5 model testi, toplam17/17, hata0,37sn. Yerel parite kaydı aynı modelSHA ve5+300 girdide max fark1.1920928955078125e-7 doğruluyor. GitHub aktarımı için temiz eski Git checkout'unu koruyan prepare:github komutu ve Pages workflow'u hazırlandı; yayın henüz gerçekleşmedi.

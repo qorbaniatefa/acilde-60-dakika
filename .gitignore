@@ -7,3 +7,7 @@ coverage/
 .env*
 !.env.example
 .review-tools/
+.venv/
+__pycache__/
+*.pyc
+data/*.tmp

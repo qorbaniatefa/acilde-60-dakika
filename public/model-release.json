@@ -1,0 +1,8 @@
+{
+  "source": "huggingface",
+  "repo": "Atefa/acilde-primer-v2-pilot",
+  "revision": "816ac3e612d7684e79ba6b2f28d6104e0e7c3139",
+  "model_sha256": "7c2dc8cb9b45fa53e670cb4797b52123cb18d5f54df3aad732d80b6f813f64aa",
+  "publication_mode": "synthetic_pilot",
+  "validated_on_real_data": false
+}

@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-04",
+  "status": "implementation_prepared_external_validation_pending",
+  "checks": {
+    "vitest": {"command": "npm test", "exit_code": 0, "files": 7, "tests": 56},
+    "python_contract_and_release_gates": {"command": "npm run test:ml", "exit_code": 0, "tests": 8},
+    "typescript": {"command": "npm run lint", "exit_code": 0},
+    "production_build": {"command": "npm run build", "exit_code": 0},
+    "python_syntax": {"command": "python -m compileall -q train.py ml tests scripts/setup-ml.py scripts/generate-synthetic.py scripts/merge-data.py scripts/publish-model.py", "exit_code": 0},
+    "playwright_browser": {"command": "node scripts/check-browser.cjs", "checks": 13, "page_errors": 0, "evidence": "2026-11-04-primer-v2-browser.json", "actual_onnx_inference": false},
+    "cypress": {"command": "npm run test:e2e -- --spec cypress/e2e/adventure.cy.ts", "status": "runner_blocked_before_tests", "exit_code": 1, "reason": "ERR_SYSTEM_ERROR / ENOMEM / uv_os_get_passwd on this Windows sandbox; earlier custom cache path also lacked Cypress 16.2.1 binary. Default cache has binary but runner still fails."},
+    "training": {"command": "npm run train", "exit_code": 1, "reason": "No module named onnxruntime; sklearn/skl2onnx/ONNX Runtime not installed. Package downloads blocked by WinError 10013 / EACCES."},
+    "python_onnx_oracle": {"status": "not_run_missing_dependencies_and_model"},
+    "browser_onnx_parity": {"status": "not_run_missing_model"},
+    "hf_publication": {"status": "not_attempted_gate_not_satisfied"},
+    "v2_demo": {"status": "not_recorded_missing_trained_model"}
+  },
+  "dataset": {"rows": 540, "sessions": 180, "real_sessions": 0, "synthetic_sessions": 180, "train_rows": 405, "test_rows": 135, "evaluation_source": "sentetik", "sha256": "3cbd16810ff9890d851eb44b558dd545bc13a3c0243bad8413e58f8c03a85aaa"},
+  "review_fixes": ["Reject noncanonical session UUIDs before public config generation", "Scope adaptive results to current feature key", "Prevent concurrent parity runs", "Keep active draft when clearing completed records", "Use fixed ONNX graph name, prune/sort opset imports and deterministic serialization"],
+  "limitations": ["No real human sessions were collected by this automation", "No model metrics or oracle probabilities have been fabricated", "Playwright gameplay checks do not establish ONNX parity or Cypress success", "Previous v1 public links and video are not updated v2 deliverables", "No local git metadata exists to establish pretraining commit chronology"]
+}

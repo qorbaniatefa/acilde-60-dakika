@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-06",
+  "status": "synthetic_pilot_prepared_not_published",
+  "user_choice": "Synthetic-only submission after disclosure that all human-session targets were selected randomly by one player",
+  "data": {"active_source": "sentetik", "active_sessions": 180, "active_rows": 540, "archived_human_sessions": 15, "archived_human_rows": 45, "reported_participants": 1, "labels_modified": false, "active_sha256": "3cbd16810ff9890d851eb44b558dd545bc13a3c0243bad8413e58f8c03a85aaa", "provenance": "data/etiket_kalitesi.json"},
+  "training": {"command": "npm run train", "exit_code": 0, "model_version": "2.0.0-pilot", "publication_mode": "synthetic_pilot", "validated_on_real_data": false, "default_real_release_eligible": false, "balanced_accuracy": 0.7686170212765957, "support_recall": 0.75, "confusion_matrix": [[37, 10], [22, 66]], "sklearn_onnx_max_absolute_error": 1.2336379606736614e-7, "model_sha256": "7c2dc8cb9b45fa53e670cb4797b52123cb18d5f54df3aad732d80b6f813f64aa"},
+  "reproducibility": {"command": "npm run train -- --output .review-tools/pilot-repro-check", "exit_code": 0, "reported_metrics_equal": true, "reported_model_sha256_equal": true},
+  "checks": {"vitest": {"tests": 61, "exit_code": 0}, "python": {"tests": 14, "exit_code": 0}, "lint": {"exit_code": 0}, "build": {"exit_code": 0}, "python_oracle": {"cases": [5, 300], "max_absolute_error": 0, "exit_code": 0}, "browser_evidence": {"file": "artifacts/primer-v2/browser-parity.json", "same_model_hash": true, "cases": [5, 300], "tolerance": 0.0001}, "source_syntax_and_json": {"exit_code": 0}},
+  "review": {"independent_read_only_review": true, "important_or_critical_findings": 0, "original_archived_records_compared": true},
+  "publication": {"explicit_command": "npm run publish:pilot -- USER/REPO", "requires_hf_login": true, "hf_published": false, "live_v2_published": false, "demo_v2_recorded": false, "github_write_blocker": "Previously returned 403 Resource not accessible by integration"},
+  "limitations": ["Metrics measure a fixed synthetic simulation, not human preferences or learning benefit", "No valid real preference labels in active training data", "Default real-data release gate remains strict; pilot requires an explicit flag", "No new public URL or demo is claimed"]
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-06",
+  "evidence_source": "user_normal_powershell_console_and_local_browser_parity_artifact",
+  "command": "npm.cmd run test:e2e",
+  "cypress": "16.2.1",
+  "browser": "Edge 156 headless",
+  "node": "24.14.0",
+  "passing": 17,
+  "failing": 0,
+  "pending": 0,
+  "skipped": 0,
+  "duration_seconds": 37,
+  "specs": {"adventure.cy.ts": 12, "model.cy.ts": 5},
+  "release_source": "huggingface",
+  "repo": "Atefa/acilde-primer-v2-pilot",
+  "revision": "816ac3e612d7684e79ba6b2f28d6104e0e7c3139",
+  "model_sha256": "7c2dc8cb9b45fa53e670cb4797b52123cb18d5f54df3aad732d80b6f813f64aa",
+  "parity_case_counts": [5, 300],
+  "maximum_absolute_difference": 1.1920928955078125e-7,
+  "tolerance_strictly_less_than": 0.0001,
+  "videos": [
+    "artifacts/cypress/videos/adventure.cy.ts (2).mp4",
+    "artifacts/cypress/videos/model.cy.ts (1).mp4"
+  ],
+  "note": "Cypress recordings are test evidence, not the required 60-90 second V2 demo. Synthetic pilot; no valid real-user preference evaluation."
+}

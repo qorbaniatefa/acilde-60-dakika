@@ -1,5 +1,35 @@
 # Acilde 60 Dakika — Tasarım
 
+## 6 Kasım — kullanıcı tarafından seçilen sentetik pilot teslimi
+
+Kullanıcı bütün 15 insan oturumunu kendisinin oynadığını ve tercih etiketlerini rastgele seçtiğini açıkladı. Bu kayıtlar gerçek davranış içerir fakat geçerli öğrenme tercihi etiketi olarak kullanılmaz. Kaynakları `gercek` olarak korunarak `data/arsiv/` içine alınır; `data/etiket_kalitesi.json` bu UUID'leri eğitimden dışlar. Etkin `data/oturumlar.csv` yalnız seed=42 üreticisinin 540 sentetik satırını içerir.
+
+Kullanıcı, yönergedeki yalnız sentetik veri seçeneğini tercih etti; Veri kaleminin yarım puanlanması kabul edilir. **Eşikler değişmez:** balanced_accuracy≥.75, recall≥.70, p=.5, parite farkı<1e-4. Etiketler veya test ayrımı geçer sonuç elde etmek için değiştirilmez.
+
+Pilot model sürümü `2.0.0-pilot`, yayın türü `synthetic_pilot`, `validated_on_real_data=false` ve varsayılan gerçek veri yayını için `release_eligible=false` taşır. **Yalnız açık `--synthetic-pilot` seçimi** sentetik-only veriyle public pilot yüklemeye izin verir. Bu yol da veri/politika/model hash'lerini, eval'i, Python+tarayıcı paritesini ve tekrarlanan eğitimi doğrular. Varsayılan komut önceki ≥15 geçerli gerçek oturum şartını korur. Pilot gerçek kullanıcıda doğrulanmış model veya başarısız gerçek adayın başarılı yayını olarak sunulmaz. Aşağıdaki ilk tasarım ve başarısız gerçek eval kayıtları geçmişi açıklamak için korunmuştur.
+
+## The Primer v2 — 4 Kasım 2026, eğitim öncesi gereksinimler
+
+Bu bölüm v1 tasarımını genişletir. Görev: oyuncunun sahnede daha derin bir açıklama isteyip istemediğini tahmin etmek. Sağlık senaryosunda tıbbi karar verilmez; model yalnız yazılım mühendisliği öğrenme desteğini düzenler. Gerekçe metni modele veya veri dosyasına girmez.
+
+Özellik sırası ve **eğitimden önce belirlenen** altın standart `model-policy.json` içindedir. Bu dosya eğitim tarafından değiştirilmez. Sıra: `bekleme_sn`, `duzenleme_sayisi`, `onceki_yanlis`, `onceki_ipucu`, `sahne_no`, `deneyim`. Hedef `destek_istegi`: oyuncunun karar sonrasında, sonuç açıklamasını görmeden verdiği 0/1 öz bildirimi. Mevcut sahnedeki doğru/yanlış sonucu veya hedef etiketi özellik değildir.
+
+- Küçük model: StandardScaler + sabit tohumlu lojistik regresyon; sklearn → ONNX. StandardScaler aynı ONNX grafiğine dahildir.
+- Eval: %25 test, **oturum bazında** sıralanmış kimlikleri seed=42 ile karıştırıp ayırma; aynı oturum iki kümeye giremez. En az 15 tamamlanmış gerçek oturum varsa yalnız gerçek oturumlardan test ayrılır; kalan gerçek ve sentetik satırlar eğitimde kullanılabilir. Yoksa sentetik pilot ölçümü açıkça belirtilir.
+- Kabul kapısı: dengeli doğruluk ≥0.75 **ve** destek sınıfı recall ≥0.70. İki sınıfın da testte bulunması şarttır. Eşik altı koşu sıfırdan farklı çıkış yapar, mevcut başarılı artefaktları değiştirmez. İyi metrik tek başına gerçek kullanıcıda geçerleme sayılmaz.
+- sklearn–Python ONNX ve Python–tarayıcı olasılık farkı **<1e-4**; 5 referans ve 300 girdilik ek diferansiyel kontrol. Model hash'i ve özellik sözleşmesi doğrulanır.
+- p≥0.5 ise sahneye cevap sızdırmayan ek düşünme sorusu ve kavram açıklaması açılır; p<0.5 ise kısa anlatım sürer. Manuel öğretmen, karar kilidi, üç sahne ve sekiz son yolu korunur. Model yüklenemezse eski hikâye oynanır ve modelin kullanılamadığı belirtilir.
+- Veri toplama modu açık rıza ile başlar; rastgele oturum UUID'si, sayısal davranışlar ve öz bildirim yerel bellekte tutulur. Ad/e-posta/konum/cihaz kimliği, gerekçe metni, tıbbi veri toplanmaz. CSV kullanıcı tarafından indirilir; otomatik sunucu gönderimi yoktur. Toplama sırasında model müdahalesi gösterilmez, etiketin etkilenmesi önlenir.
+- Modelin public HF yayını için en az 15 **tamamlanmış, üç karar ve üç etiket içeren gerçek oturum**, geçen eval ve parite şarttır. Sentetik pilot yayınlanabilir sürüm diye sunulmaz. Tüketici tam commit SHA'sına sabitlenir.
+
+### Üç yeni kabul örneği
+
+6. Aynı sahnede `[5,0,0,0,1,1]` için p<0.5 iken `[90,18,0,0,1,0]` için p≥0.5 beklenir. İkinci oyuncuda ek düşünme desteği görünür; doğru seçenek açığa çıkmaz. Bu örnekler eval kapısına ek davranış kontrolüdür.
+7. Rıza verilmeden veri satırı oluşmaz. Rızalı oyunda üç kararın her biri için öz bildirim alınır; CSV'de üç satırın UUID'si aynı ve `kaynak=gercek` olur. Yeniden başlatma yeni UUID üretir. Gerekçe metni CSV'ye yazılmaz.
+8. Beş referans girdide gerçek tarayıcı ONNX olasılığı Python oracle olasılığından <1e-4 sapar; 12 eski Cypress regresyonu geçer. Yanlış hash, bozuk model veya ağ hatasında olasılık uydurulmaz; oyun karar vermeye devam eder.
+
+Eğitim öncesi kayıt: bu metin ve `model-policy.json` model üretilmeden yazıldı. Yerel klasörde Git geçmişi yoktur; kriptografik zaman damgası iddia edilmez. Eğitim config'e politika dosyasının SHA256'sını kaydeder; ilerideki değişiklikler yeni politika sürümü gerektirir.
+
 Durum: Kullanıcı tarafından 29 Ekim 2026 tarihinde onaylandı.
 
 ## Amaç ve problem

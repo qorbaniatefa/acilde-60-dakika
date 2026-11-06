@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-06",
+  "source": "User-provided output from npm.cmd run publish:pilot -- Atefa/acilde-primer-v2-pilot; local hf-release.json and model-release.json also inspected",
+  "status": "published",
+  "repo": "Atefa/acilde-primer-v2-pilot",
+  "revision": "816ac3e612d7684e79ba6b2f28d6104e0e7c3139",
+  "model_sha256": "7c2dc8cb9b45fa53e670cb4797b52123cb18d5f54df3aad732d80b6f813f64aa",
+  "model_url": "https://huggingface.co/Atefa/acilde-primer-v2-pilot/resolve/816ac3e612d7684e79ba6b2f28d6104e0e7c3139/model.onnx",
+  "config_url": "https://huggingface.co/Atefa/acilde-primer-v2-pilot/resolve/816ac3e612d7684e79ba6b2f28d6104e0e7c3139/config.json",
+  "publication_mode": "synthetic_pilot",
+  "validated_on_real_data": false,
+  "public_download_without_login": "verified_by_unauthenticated_download",
+  "publisher_checks": {"python_oracle_cases": [5, 300], "python_oracle_max_delta": 0, "retraining_metrics_and_hash_match": true, "browser_evidence_matches_model_hash": true},
+  "client_manifest": "public/model-release.json",
+  "previous_manifest": "artifacts/primer-v2/previous-model-release.json",
+  "agent_independent_web_open": "unavailable_in_current_environment",
+  "next_check": "Rerun Cypress with the HF-pinned manifest; prior browser evidence used the same model bytes from local source"
+}

@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-04",
+  "source": "User-provided output from npm.cmd run test:e2e in normal PowerShell",
+  "tests": 17,
+  "passing": 17,
+  "failing": 0,
+  "pending": 0,
+  "skipped": 0,
+  "duration_seconds_reported": 39,
+  "specs": [
+    {"name": "adventure.cy.ts", "tests": 12, "passing": 12, "duration_seconds_reported": 27},
+    {"name": "model.cy.ts", "tests": 5, "passing": 5, "duration_seconds_reported": 11}
+  ],
+  "model_video": {"path": "artifacts/cypress/videos/model.cy.ts.mp4", "exists": true, "bytes": 1241856},
+  "browser_evidence": "artifacts/primer-v2/browser-parity.json",
+  "notes": [
+    "This run was performed by the user, not claimed as agent execution",
+    "Existing adventure video metadata still points to the earlier v1 recording; it is not claimed as new v2 video evidence",
+    "After retraining on real sessions, parity and regressions must be rerun for the new model"
+  ]
+}

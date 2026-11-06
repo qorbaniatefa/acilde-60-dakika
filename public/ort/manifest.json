@@ -1,0 +1,8 @@
+{
+  "version": "1.24.3",
+  "files": [
+    "ort.wasm.min.mjs",
+    "ort-wasm-simd-threaded.mjs",
+    "ort-wasm-simd-threaded.wasm"
+  ]
+}

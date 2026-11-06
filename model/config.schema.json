@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Primer v2 model artifact contract",
+  "type": "object",
+  "required": ["schema_version", "model_version", "publication_mode", "validated_on_real_data", "features", "class_labels", "positive_class_index", "probability_threshold", "parity_tolerance", "input", "output", "metrics", "model_sha256", "dataset_sha256", "policy_sha256", "evaluation_source", "real_sessions", "release_eligible", "split", "environment"],
+  "properties": {
+    "schema_version": {"const": "2.0.0"},
+    "model_version": {"type": "string"},
+    "publication_mode": {"enum": ["synthetic_pilot", "real_validated"]},
+    "validated_on_real_data": {"type": "boolean"},
+    "features": {"type": "array", "minItems": 6, "maxItems": 6, "items": {"type": "object", "required": ["name", "minimum", "maximum", "unit"], "properties": {"name": {"type": "string"}, "minimum": {"type": "number"}, "maximum": {"type": "number"}, "unit": {"type": "string"}}}},
+    "class_labels": {"const": ["kisa_anlatim", "derin_anlatim"]},
+    "positive_class_index": {"const": 1},
+    "probability_threshold": {"const": 0.5},
+    "parity_tolerance": {"const": 0.0001},
+    "input": {"type": "object", "required": ["name", "dtype", "shape"], "properties": {"name": {"const": "features"}, "dtype": {"const": "float32"}, "shape": {"const": [1, 6]}}},
+    "output": {"type": "object", "required": ["probabilities"], "properties": {"probabilities": {"type": "string"}}},
+    "metrics": {"type": "object", "required": ["balanced_accuracy", "support_recall", "confusion_matrix"], "properties": {"balanced_accuracy": {"type": "number", "minimum": 0.75, "maximum": 1}, "support_recall": {"type": "number", "minimum": 0.7, "maximum": 1}, "confusion_matrix": {"type": "array", "minItems": 2, "maxItems": 2}}},
+    "model_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "dataset_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "policy_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "evaluation_source": {"enum": ["gercek", "sentetik"]},
+    "real_sessions": {"type": "integer", "minimum": 0},
+    "release_eligible": {"type": "boolean"},
+    "split": {"type": "object"},
+    "environment": {"type": "object"}
+  }
+}

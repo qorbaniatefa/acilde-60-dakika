@@ -1,0 +1,110 @@
+{
+  "evaluation": "training-only grouped cross-validation",
+  "final_holdout_evaluated": false,
+  "real_training_rows": 33,
+  "synthetic_training_rows": 540,
+  "final_holdout_rows_reserved": 12,
+  "strategies": {
+    "mixed_unweighted": {
+      "folds": [
+        {
+          "valid": true,
+          "balanced_accuracy": 0.5,
+          "support_recall": 0.0,
+          "confusion_matrix": [
+            [
+              8,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "valid": true,
+          "balanced_accuracy": 0.5,
+          "support_recall": 0.0,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              9,
+              0
+            ]
+          ]
+        },
+        {
+          "valid": true,
+          "balanced_accuracy": 0.5,
+          "support_recall": 0.0,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              6,
+              0
+            ]
+          ]
+        }
+      ],
+      "mean_balanced_accuracy": 0.5
+    },
+    "real_only": {
+      "folds": [
+        {
+          "valid": true,
+          "balanced_accuracy": 0.5,
+          "support_recall": 0.5,
+          "confusion_matrix": [
+            [
+              4,
+              4
+            ],
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "valid": true,
+          "balanced_accuracy": 0.2222222222222222,
+          "support_recall": 0.1111111111111111,
+          "confusion_matrix": [
+            [
+              1,
+              2
+            ],
+            [
+              8,
+              1
+            ]
+          ]
+        },
+        {
+          "valid": true,
+          "balanced_accuracy": 0.5833333333333334,
+          "support_recall": 0.16666666666666666,
+          "confusion_matrix": [
+            [
+              3,
+              0
+            ],
+            [
+              5,
+              1
+            ]
+          ]
+        }
+      ],
+      "mean_balanced_accuracy": 0.4351851851851852
+    }
+  },
+  "note": "Exploratory diagnosis, not a passing release evaluation. No model or label is modified."
+}

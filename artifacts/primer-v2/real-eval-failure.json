@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-05",
+  "source": "User console from npm.cmd run train",
+  "real_sessions": 15,
+  "real_decision_rows": 45,
+  "evaluation_source": "gercek",
+  "reported_balanced_accuracy": 0.5,
+  "reported_support_recall": null,
+  "minimum_balanced_accuracy": 0.75,
+  "minimum_support_recall": 0.7,
+  "gate_passed": false,
+  "artifact_replacement": false,
+  "training_rows": {"real": 33, "synthetic": 540},
+  "held_out_real_rows": 12,
+  "diagnosis": {
+    "method": "3-fold grouped cross-validation on training partition only",
+    "final_holdout_reevaluated_by_diagnosis": false,
+    "mixed_mean_balanced_accuracy": 0.5,
+    "real_only_mean_balanced_accuracy": 0.4351851851851852,
+    "real_training_constant_features": ["duzenleme_sayisi", "onceki_ipucu"],
+    "report": "artifacts/primer-v2/training-diagnosis.json"
+  },
+  "decisions": ["Acceptance thresholds, labels, random seed and split were not changed", "No parameter sweep against final holdout", "Failed candidate must not be published", "Next step is understanding missing preference signals rather than assuming more identical sessions will suffice"]
+}

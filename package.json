@@ -12,7 +12,18 @@
     "lint": "tsc --noEmit",
     "eval": "node scripts/run-eval.ts",
     "test:e2e": "cypress run --browser edge",
-    "test:e2e:open": "cypress open"
+    "test:e2e:open": "cypress open",
+    "setup:ml": "python scripts/setup-ml.py",
+    "train": "node scripts/ml-command.mjs train.py",
+    "test:ml": "node scripts/ml-command.mjs -m unittest discover -s tests -p test_*.py",
+    "parite": "node scripts/ml-command.mjs tests/parite.py",
+    "publish:model": "node scripts/ml-command.mjs scripts/publish-model.py",
+    "vendor:ort": "node scripts/vendor-ort.mjs",
+    "diagnose:ml": "node scripts/ml-command.mjs scripts/diagnose-training.py",
+    "prepare:pilot": "node scripts/ml-command.mjs scripts/prepare-synthetic-pilot.py",
+    "publish:pilot": "node scripts/ml-command.mjs scripts/publish-model.py --synthetic-pilot",
+    "login:hf": "node scripts/ml-command.mjs scripts/login-hf.py",
+    "prepare:github": "node scripts/ml-command.mjs scripts/prepare_github_upload.py"
   },
   "dependencies": {
     "@google/genai": "^2.32.0",

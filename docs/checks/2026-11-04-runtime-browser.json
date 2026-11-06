@@ -1,0 +1,24 @@
+{
+  "tool": "Playwright/Edge",
+  "url": "http://127.0.0.1:3107/?parite",
+  "runtimeRequests": [
+    "http://127.0.0.1:3107/ort/manifest.json",
+    "http://127.0.0.1:3107/ort/ort.wasm.min.mjs",
+    "http://127.0.0.1:3107/ort/ort-wasm-simd-threaded.mjs",
+    "http://127.0.0.1:3107/ort/ort-wasm-simd-threaded.wasm"
+  ],
+  "checks": [
+    {
+      "count": 5,
+      "maxDelta": 1.1920928955078125e-7
+    },
+    {
+      "count": 300,
+      "maxDelta": 1.1920928955078125e-7
+    }
+  ],
+  "modelSha256": "7c2dc8cb9b45fa53e670cb4797b52123cb18d5f54df3aad732d80b6f813f64aa",
+  "shortProbability": 0.00862962,
+  "deepProbability": 0.90221643,
+  "status": "passed"
+}
